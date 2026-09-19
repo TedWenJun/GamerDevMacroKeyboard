@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish GitHub release
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Version from tag
+        id: version
+        shell: pwsh
+        run: |
+          $v = '${{ github.ref_name }}'.TrimStart('v')
+          "value=$v" >> $env:GITHUB_OUTPUT
+
+      - name: Package win-x64 (runs unit tests)
+        shell: pwsh
+        run: ./scripts/publish.ps1 -Version ${{ steps.version.outputs.value }} -Runtime win-x64
+
+      - name: Package win-arm64
+        shell: pwsh
+        run: ./scripts/publish.ps1 -Version ${{ steps.version.outputs.value }} -Runtime win-arm64 -SkipTests
+
+      - name: Create release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $v = '${{ steps.version.outputs.value }}'
+          $ghArgs = @('release', 'create', '${{ github.ref_name }}')
+          $ghArgs += Get-ChildItem artifacts -File | ForEach-Object FullName
+          $ghArgs += @('--title', "MacroHub $v", '--generate-notes')
+          if ($v -match '-') { $ghArgs += '--prerelease' }
+          gh @ghArgs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

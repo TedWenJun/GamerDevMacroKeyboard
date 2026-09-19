@@ -1,0 +1,36 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.1.0",
+	"FriendlyName": "MacroKeyboard",
+	"Description": "Receives macro pad controls from MacroHub and maps them to Unreal actions based on the current editor context (Sequencer, animation editor, level editor, PIE).",
+	"Category": "Input",
+	"CreatedBy": "MacroHub contributors",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "MacroKeyboardRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"PlatformAllowList": [ "Win64" ]
+		},
+		{
+			"Name": "MacroKeyboardEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [ "Win64" ]
+		}
+	],
+	"LocalizationTargets": [
+		{
+			"Name": "MacroKeyboard",
+			"LoadingPolicy": "Editor"
+		}
+	]
+}

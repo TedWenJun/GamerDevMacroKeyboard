@@ -1,0 +1,1695 @@
+﻿# MacroKeyboard English translation.
+# Fill out your copyright notice in the Description page of Project Settings.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: MacroKeyboard\n"
+"POT-Creation-Date: 2026-09-19 07:25\n"
+"PO-Revision-Date: 2026-09-19 07:25\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Key:	EMacroEditorAction
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction [Enum ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction [Enum ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroEditorAction"
+msgid "What a control does in a given editor context."
+msgstr "What a control does in a given editor context."
+
+#. Key:	EMacroEditorAction.Chord
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:Chord [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:Chord [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroEditorAction.Chord"
+msgid "Chord"
+msgstr "Chord"
+
+#. Key:	EMacroEditorAction.Chord
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:Chord [EnumEntry ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:Chord [EnumEntry ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroEditorAction.Chord"
+msgid "Send a keyboard shortcut inside Unreal (Slate routing, not the operating system)."
+msgstr "Send a keyboard shortcut inside Unreal (Slate routing, not the operating system)."
+
+#. Key:	EMacroEditorAction.ConsoleCommand
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:ConsoleCommand [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:ConsoleCommand [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroEditorAction.ConsoleCommand"
+msgid "Console Command"
+msgstr "Console Command"
+
+#. Key:	EMacroEditorAction.ConsoleCommand
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:ConsoleCommand [EnumEntry ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:ConsoleCommand [EnumEntry ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroEditorAction.ConsoleCommand"
+msgid "Execute a console / editor command, e.g. \"stat fps\"."
+msgstr "Execute a console / editor command, e.g. \"stat fps\"."
+
+#. Key:	EMacroEditorAction.EMacroEditorAction_MAX
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:EMacroEditorAction_MAX [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:EMacroEditorAction_MAX [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroEditorAction.EMacroEditorAction_MAX"
+msgid "EMacro Editor Action MAX"
+msgstr "EMacro Editor Action MAX"
+
+#. Key:	EMacroEditorAction.None
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:None [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:None [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroEditorAction.None"
+msgid "None"
+msgstr "None"
+
+#. Key:	EMacroEditorAction.None
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:None [EnumEntry ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:None [EnumEntry ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroEditorAction.None"
+msgid "Nothing (use to shadow a broader binding in one context)."
+msgstr "Nothing (use to shadow a broader binding in one context)."
+
+#. Key:	EMacroEditorAction.TimelinePlayPause
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:TimelinePlayPause [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:TimelinePlayPause [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroEditorAction.TimelinePlayPause"
+msgid "Timeline Play Pause"
+msgstr "Timeline Play Pause"
+
+#. Key:	EMacroEditorAction.TimelinePlayPause
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:TimelinePlayPause [EnumEntry ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:TimelinePlayPause [EnumEntry ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroEditorAction.TimelinePlayPause"
+msgid "Play or pause the Sequencer / animation preview."
+msgstr "Play or pause the Sequencer / animation preview."
+
+#. Key:	EMacroEditorAction.TimelineScrub
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:TimelineScrub [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:TimelineScrub [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroEditorAction.TimelineScrub"
+msgid "Timeline Scrub"
+msgstr "Timeline Scrub"
+
+#. Key:	EMacroEditorAction.TimelineScrub
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:TimelineScrub [EnumEntry ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:TimelineScrub [EnumEntry ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroEditorAction.TimelineScrub"
+msgid "Move the Sequencer playhead / animation preview time. Rotary controls scrub by their turn direction."
+msgstr "Move the Sequencer playhead / animation preview time. Rotary controls scrub by their turn direction."
+
+#. Key:	EMacroEditorAction.UICommand
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:UICommand [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:UICommand [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroEditorAction.UICommand"
+msgid "UICommand"
+msgstr "UICommand"
+
+#. Key:	EMacroEditorAction.UICommand
+#. SourceLocation:	/Script/MacroKeyboardEditor.EMacroEditorAction:UICommand [EnumEntry ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.EMacroEditorAction:UICommand [EnumEntry ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroEditorAction.UICommand"
+msgid "Look the shortcut up by command name and send it — survives users rebinding the command."
+msgstr "Look the shortcut up by command name and send it — survives users rebinding the command."
+
+#. Key:	MacroContextLighting
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroContextLighting [ScriptStruct DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroContextLighting [ScriptStruct DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroContextLighting"
+msgid "Macro Context Lighting"
+msgstr "Macro Context Lighting"
+
+#. Key:	MacroContextLighting
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroContextLighting [ScriptStruct ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroContextLighting [ScriptStruct ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroContextLighting"
+msgid "Backlight to apply while a given editor context is in front."
+msgstr "Backlight to apply while a given editor context is in front."
+
+#. Key:	Lighting
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroContextLighting:Context [StrProperty Category meta-data]
+#: /Script/MacroKeyboardEditor.MacroContextLighting:Context [StrProperty Category meta-data]
+msgctxt "UObjectCategory,Lighting"
+msgid "Lighting"
+msgstr "Lighting"
+
+#. Key:	MacroContextLighting:Context
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroContextLighting:Context [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroContextLighting:Context [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroContextLighting:Context"
+msgid "Context"
+msgstr "Context"
+
+#. Key:	MacroContextLighting:Context
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroContextLighting:Context [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroContextLighting:Context [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroContextLighting:Context"
+msgid "Context id; empty applies to every context that has none of its own."
+msgstr "Context id; empty applies to every context that has none of its own."
+
+#. Key:	MacroContextLighting:Lighting
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroContextLighting:Lighting [StructProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroContextLighting:Lighting [StructProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroContextLighting:Lighting"
+msgid "Lighting"
+msgstr "Lighting"
+
+#. Key:	MacroKeyboardBinding
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding [ScriptStruct DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding [ScriptStruct DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding"
+msgid "Macro Keyboard Binding"
+msgstr "Macro Keyboard Binding"
+
+#. Key:	MacroKeyboardBinding
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding [ScriptStruct ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding [ScriptStruct ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding"
+msgid "One binding: \"in this context, this control does this\".\nContext matching is exact; leave it empty to apply in every context that has no more specific binding."
+msgstr "One binding: \"in this context, this control does this\".\nContext matching is exact; leave it empty to apply in every context that has no more specific binding."
+
+#. Key:	MacroKeyboardBinding:Action
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Action [EnumProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Action [EnumProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:Action"
+msgid "Action"
+msgstr "Action"
+
+#. Key:	MacroKeyboardBinding:Amount
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Amount [FloatProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Amount [FloatProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:Amount"
+msgid "Amount"
+msgstr "Amount"
+
+#. Key:	MacroKeyboardBinding:Amount
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Amount [FloatProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Amount [FloatProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:Amount"
+msgid "Frames per trigger; rotary controls use the direction of the turn (Action = TimelineScrub)."
+msgstr "Frames per trigger; rotary controls use the direction of the turn (Action = TimelineScrub)."
+
+#. Key:	MacroKeyboardBinding:bOnRelease
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:bOnRelease [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:bOnRelease [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:bOnRelease"
+msgid "On Release"
+msgstr "On Release"
+
+#. Key:	MacroKeyboardBinding:bOnRelease
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:bOnRelease [BoolProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:bOnRelease [BoolProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:bOnRelease"
+msgid "Run on release instead of press."
+msgstr "Run on release instead of press."
+
+#. Key:	MacroKeyboardBinding:bSpeedAcceleration
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:bSpeedAcceleration [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:bSpeedAcceleration [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:bSpeedAcceleration"
+msgid "Speed Acceleration"
+msgstr "Speed Acceleration"
+
+#. Key:	MacroKeyboardBinding:bSpeedAcceleration
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:bSpeedAcceleration [BoolProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:bSpeedAcceleration [BoolProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:bSpeedAcceleration"
+msgid "Rotary controls: turning quickly moves further per detent (2x under 90 ms, 5x under 40 ms between detents)."
+msgstr "Rotary controls: turning quickly moves further per detent (2x under 90 ms, 5x under 40 ms between detents)."
+
+#. Key:	MacroKeyboardBinding:Chord
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Chord [StructProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Chord [StructProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:Chord"
+msgid "Chord"
+msgstr "Chord"
+
+#. Key:	MacroKeyboardBinding:Chord
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Chord [StructProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Chord [StructProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:Chord"
+msgid "Shortcut to send (Action = Chord)."
+msgstr "Shortcut to send (Action = Chord)."
+
+#. Key:	MacroKeyboardBinding:CommandContext
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandContext [NameProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandContext [NameProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:CommandContext"
+msgid "Command Context"
+msgstr "Command Context"
+
+#. Key:	MacroKeyboardBinding:CommandContext
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandContext [NameProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandContext [NameProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:CommandContext"
+msgid "Binding context of the command, e.g. \"LevelEditor\", \"Sequencer\" (Action = UICommand)."
+msgstr "Binding context of the command, e.g. \"LevelEditor\", \"Sequencer\" (Action = UICommand)."
+
+#. Key:	MacroKeyboardBinding:CommandName
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandName [NameProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandName [NameProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:CommandName"
+msgid "Command Name"
+msgstr "Command Name"
+
+#. Key:	MacroKeyboardBinding:CommandName
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandName [NameProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:CommandName [NameProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:CommandName"
+msgid "Command name inside that context, e.g. \"Undo\" (Action = UICommand)."
+msgstr "Command name inside that context, e.g. \"Undo\" (Action = UICommand)."
+
+#. Key:	MacroKeyboardBinding:ConsoleCommand
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:ConsoleCommand [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:ConsoleCommand [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:ConsoleCommand"
+msgid "Console Command"
+msgstr "Console Command"
+
+#. Key:	MacroKeyboardBinding:ConsoleCommand
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:ConsoleCommand [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:ConsoleCommand [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:ConsoleCommand"
+msgid "Console / editor command (Action = ConsoleCommand)."
+msgstr "Console / editor command (Action = ConsoleCommand)."
+
+#. Key:	Binding
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Context [StrProperty Category meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Context [StrProperty Category meta-data]
+msgctxt "UObjectCategory,Binding"
+msgid "Binding"
+msgstr "Binding"
+
+#. Key:	MacroKeyboardBinding:Context
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Context [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Context [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:Context"
+msgid "Context"
+msgstr "Context"
+
+#. Key:	MacroKeyboardBinding:Context
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Context [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Context [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:Context"
+msgid "Context id reported by the plugin: levelEditor, sequencer, animation, animBlueprint, pie, simulate, editor…"
+msgstr "Context id reported by the plugin: levelEditor, sequencer, animation, animBlueprint, pie, simulate, editor…"
+
+#. Key:	MacroKeyboardBinding:Control
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Control [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Control [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:Control"
+msgid "Control"
+msgstr "Control"
+
+#. Key:	MacroKeyboardBinding:Control
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:Control [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:Control [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:Control"
+msgid "Control id from MacroHub: K1…K9, K0, KDOT, KENTER, KMINUS, KPLUS, KSPACE, KNOB_CW/CCW/PRESS, JOY_*."
+msgstr "Control id from MacroHub: K1…K9, K0, KDOT, KENTER, KMINUS, KPLUS, KSPACE, KNOB_CW/CCW/PRESS, JOY_*."
+
+#. Key:	MacroKeyboardBinding:DetentsPerTrigger
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:DetentsPerTrigger [IntProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:DetentsPerTrigger [IntProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:DetentsPerTrigger"
+msgid "Detents Per Trigger"
+msgstr "Detents Per Trigger"
+
+#. Key:	MacroKeyboardBinding:DetentsPerTrigger
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:DetentsPerTrigger [IntProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:DetentsPerTrigger [IntProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:DetentsPerTrigger"
+msgid "Detents per trigger for a rotary control: the pad reports several steps per physical click, so 3 here means\none click moves the timeline once. 1 acts on every step."
+msgstr "Detents per trigger for a rotary control: the pad reports several steps per physical click, so 3 here means\none click moves the timeline once. 1 acts on every step."
+
+#. Key:	MacroKeyboardBinding:DisplayName
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:DisplayName [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:DisplayName [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:DisplayName"
+msgid "Display Name"
+msgstr "Display Name"
+
+#. Key:	MacroKeyboardBinding:DisplayName
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:DisplayName [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:DisplayName [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:DisplayName"
+msgid "Name shown on the key cap in the MacroKeyboard panel; empty shows the action itself (e.g. the shortcut)."
+msgstr "Name shown on the key cap in the MacroKeyboard panel; empty shows the action itself (e.g. the shortcut)."
+
+#. Key:	MacroKeyboardBinding:HoldMultiplier
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:HoldMultiplier [IntProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:HoldMultiplier [IntProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardBinding:HoldMultiplier"
+msgid "Hold Multiplier"
+msgstr "Hold Multiplier"
+
+#. Key:	MacroKeyboardBinding:HoldMultiplier
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardBinding:HoldMultiplier [IntProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardBinding:HoldMultiplier [IntProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardBinding:HoldMultiplier"
+msgid "Rotary controls: how much further a detent moves while the knob is held down during the turn. 1 turns it off.\nWhen a context uses it, the knob press becomes a modifier there and its own binding runs as a click on release."
+msgstr "Rotary controls: how much further a detent moves while the knob is held down during the turn. 1 turns it off.\nWhen a context uses it, the knob press becomes a modifier there and its own binding runs as a click on release."
+
+#. Key:	MacroKeyboardEditorSettings
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings [Class DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings [Class DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardEditorSettings"
+msgid "MacroKeyboard (Editor)"
+msgstr "MacroKeyboard (Editor)"
+
+#. Key:	MacroKeyboardEditorSettings
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings [Class ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings [Class ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardEditorSettings"
+msgid "Editor Preferences → Plugins → MacroKeyboard (Editor): which control does what in which editor."
+msgstr "Editor Preferences → Plugins → MacroKeyboard (Editor): which control does what in which editor."
+
+#. Key:	MacroKeyboardEditorSettings:bDriveLighting
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bDriveLighting [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bDriveLighting [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardEditorSettings:bDriveLighting"
+msgid "Drive Lighting"
+msgstr "Drive Lighting"
+
+#. Key:	MacroKeyboardEditorSettings:bDriveLighting
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bDriveLighting [BoolProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bDriveLighting [BoolProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardEditorSettings:bDriveLighting"
+msgid "Let the editor tint the pad: each context below gets its own backlight while it is in front."
+msgstr "Let the editor tint the pad: each context below gets its own backlight while it is in front."
+
+#. Key:	Bindings
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:Bindings [ArrayProperty Category meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:Bindings [ArrayProperty Category meta-data]
+msgctxt "UObjectCategory,Bindings"
+msgid "Bindings"
+msgstr "Bindings"
+
+#. Key:	MacroKeyboardEditorSettings:Bindings
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:Bindings [ArrayProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:Bindings [ArrayProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardEditorSettings:Bindings"
+msgid "Bindings"
+msgstr "Bindings"
+
+#. Key:	MacroKeyboardEditorSettings:bLogControlEvents
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bLogControlEvents [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bLogControlEvents [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardEditorSettings:bLogControlEvents"
+msgid "Log Control Events"
+msgstr "Log Control Events"
+
+#. Key:	MacroKeyboardEditorSettings:bLogControlEvents
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bLogControlEvents [BoolProperty ToolTip meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:bLogControlEvents [BoolProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardEditorSettings:bLogControlEvents"
+msgid "Write every control the editor acts on to the Output Log (\"KNOB_CW [sequencer] -> timeline scrub…\").\nOff by default; the same lines stay available at Verbose (`log LogMacroKeyboard Verbose`)."
+msgstr "Write every control the editor acts on to the Output Log (\"KNOB_CW [sequencer] -> timeline scrub…\").\nOff by default; the same lines stay available at Verbose (`log LogMacroKeyboard Verbose`)."
+
+#. Key:	MacroKeyboardEditorSettings:ContextLighting
+#. SourceLocation:	/Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:ContextLighting [ArrayProperty DisplayName meta-data]
+#: /Script/MacroKeyboardEditor.MacroKeyboardEditorSettings:ContextLighting [ArrayProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardEditorSettings:ContextLighting"
+msgid "Context Lighting"
+msgstr "Context Lighting"
+
+#. Key:	EMacroControlPhase
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroControlPhase [Enum ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroControlPhase [Enum ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroControlPhase"
+msgid "Press or release of a control. Rotary controls send one Down/Up pair per detent."
+msgstr "Press or release of a control. Rotary controls send one Down/Up pair per detent."
+
+#. Key:	EMacroControlPhase.Down
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroControlPhase:Down [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroControlPhase:Down [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroControlPhase.Down"
+msgid "Down"
+msgstr "Down"
+
+#. Key:	EMacroControlPhase.EMacroControlPhase_MAX
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroControlPhase:EMacroControlPhase_MAX [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroControlPhase:EMacroControlPhase_MAX [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroControlPhase.EMacroControlPhase_MAX"
+msgid "EMacro Control Phase MAX"
+msgstr "EMacro Control Phase MAX"
+
+#. Key:	EMacroControlPhase.Up
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroControlPhase:Up [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroControlPhase:Up [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroControlPhase.Up"
+msgid "Up"
+msgstr "Up"
+
+#. Key:	EMacroHubConnection
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroHubConnection [Enum ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroHubConnection [Enum ToolTip meta-data]
+msgctxt "UObjectToolTips,EMacroHubConnection"
+msgid "Connection state of the MacroHub client."
+msgstr "Connection state of the MacroHub client."
+
+#. Key:	EMacroHubConnection.Connected
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroHubConnection:Connected [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroHubConnection:Connected [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroHubConnection.Connected"
+msgid "Connected"
+msgstr "Connected"
+
+#. Key:	EMacroHubConnection.Connecting
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroHubConnection:Connecting [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroHubConnection:Connecting [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroHubConnection.Connecting"
+msgid "Connecting"
+msgstr "Connecting"
+
+#. Key:	EMacroHubConnection.Disabled
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroHubConnection:Disabled [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroHubConnection:Disabled [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroHubConnection.Disabled"
+msgid "Disabled"
+msgstr "Disabled"
+
+#. Key:	EMacroHubConnection.EMacroHubConnection_MAX
+#. SourceLocation:	/Script/MacroKeyboardRuntime.EMacroHubConnection:EMacroHubConnection_MAX [EnumEntry DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.EMacroHubConnection:EMacroHubConnection_MAX [EnumEntry DisplayName meta-data]
+msgctxt "UObjectDisplayNames,EMacroHubConnection.EMacroHubConnection_MAX"
+msgid "EMacro Hub Connection MAX"
+msgstr "EMacro Hub Connection MAX"
+
+#. Key:	MacroControlEvent
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent [ScriptStruct DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent [ScriptStruct DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent"
+msgid "Macro Control Event"
+msgstr "Macro Control Event"
+
+#. Key:	MacroControlEvent
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent [ScriptStruct ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent [ScriptStruct ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlEvent"
+msgid "One control event as sent by MacroHub (protocol v2, \"control\" message).\nControl ids come from the Hub's device map, e.g. K1, KNOB_CW, JOY_UP."
+msgstr "One control event as sent by MacroHub (protocol v2, \"control\" message).\nControl ids come from the Hub's device map, e.g. K1, KNOB_CW, JOY_UP."
+
+#. Key:	MacroKeyboard
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Control [StrProperty Category meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Control [StrProperty Category meta-data]
+msgctxt "UObjectCategory,MacroKeyboard"
+msgid "MacroKeyboard"
+msgstr "MacroKeyboard"
+
+#. Key:	MacroControlEvent:Control
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Control [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Control [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent:Control"
+msgid "Control"
+msgstr "Control"
+
+#. Key:	MacroControlEvent:Control
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Control [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Control [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlEvent:Control"
+msgid "Logical control id, e.g. \"K1\", \"KNOB_CW\", \"JOY_PRESS\"."
+msgstr "Logical control id, e.g. \"K1\", \"KNOB_CW\", \"JOY_PRESS\"."
+
+#. Key:	MacroControlEvent:Kind
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Kind [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Kind [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent:Kind"
+msgid "Kind"
+msgstr "Kind"
+
+#. Key:	MacroControlEvent:Kind
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Kind [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Kind [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlEvent:Kind"
+msgid "\"key\", \"knob\" or \"joystick\"."
+msgstr "\"key\", \"knob\" or \"joystick\"."
+
+#. Key:	MacroControlEvent:Part
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Part [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Part [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent:Part"
+msgid "Part"
+msgstr "Part"
+
+#. Key:	MacroControlEvent:Part
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Part [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Part [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlEvent:Part"
+msgid "Sub-part of a knob/joystick: cw, ccw, press, up, down, left, right."
+msgstr "Sub-part of a knob/joystick: cw, ccw, press, up, down, left, right."
+
+#. Key:	MacroControlEvent:Phase
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Phase [EnumProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Phase [EnumProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent:Phase"
+msgid "Phase"
+msgstr "Phase"
+
+#. Key:	MacroControlEvent:Seq
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Seq [Int64Property DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Seq [Int64Property DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent:Seq"
+msgid "Seq"
+msgstr "Seq"
+
+#. Key:	MacroControlEvent:Seq
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Seq [Int64Property ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Seq [Int64Property ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlEvent:Seq"
+msgid "Per-connection sequence number; a gap means the game thread stalled and the Hub dropped queued events."
+msgstr "Per-connection sequence number; a gap means the game thread stalled and the Hub dropped queued events."
+
+#. Key:	MacroControlEvent:Source
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Source [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Source [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent:Source"
+msgid "Source"
+msgstr "Source"
+
+#. Key:	MacroControlEvent:Source
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:Source [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:Source [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlEvent:Source"
+msgid "\"pad\" for the physical device, \"simulate\" for the Hub's web UI / tests."
+msgstr "\"pad\" for the physical device, \"simulate\" for the Hub's web UI / tests."
+
+#. Key:	MacroControlEvent:TimestampMs
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:TimestampMs [DoubleProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:TimestampMs [DoubleProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlEvent:TimestampMs"
+msgid "Timestamp Ms"
+msgstr "Timestamp Ms"
+
+#. Key:	MacroControlEvent:TimestampMs
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlEvent:TimestampMs [DoubleProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlEvent:TimestampMs [DoubleProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlEvent:TimestampMs"
+msgid "Hub monotonic timestamp in milliseconds — use the delta between detents for knob acceleration."
+msgstr "Hub monotonic timestamp in milliseconds — use the delta between detents for knob acceleration."
+
+#. Key:	MacroControlInfo
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo [ScriptStruct DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo [ScriptStruct DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlInfo"
+msgid "Macro Control Info"
+msgstr "Macro Control Info"
+
+#. Key:	MacroControlInfo
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo [ScriptStruct ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo [ScriptStruct ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlInfo"
+msgid "A control as described by MacroHub (welcome / profile message): what it is called and where it sits on the device,\nso a UI can draw the pad without knowing the hardware."
+msgstr "A control as described by MacroHub (welcome / profile message): what it is called and where it sits on the device,\nso a UI can draw the pad without knowing the hardware."
+
+#. Key:	MacroControlInfo:Id
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Id [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Id [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlInfo:Id"
+msgid "Id"
+msgstr "Id"
+
+#. Key:	MacroControlInfo:Kind
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Kind [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Kind [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlInfo:Kind"
+msgid "Kind"
+msgstr "Kind"
+
+#. Key:	MacroControlInfo:Kind
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Kind [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Kind [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlInfo:Kind"
+msgid "\"key\", \"knob\" or \"joystick\"."
+msgstr "\"key\", \"knob\" or \"joystick\"."
+
+#. Key:	MacroControlInfo:Label
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Label [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Label [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlInfo:Label"
+msgid "Label"
+msgstr "Label"
+
+#. Key:	MacroControlInfo:Part
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Part [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Part [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlInfo:Part"
+msgid "Part"
+msgstr "Part"
+
+#. Key:	MacroControlInfo:Part
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Part [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Part [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlInfo:Part"
+msgid "Sub-part of a knob/joystick: cw, ccw, press, up, down, left, right."
+msgstr "Sub-part of a knob/joystick: cw, ccw, press, up, down, left, right."
+
+#. Key:	MacroControlInfo:Rect
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Rect [StructProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Rect [StructProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroControlInfo:Rect"
+msgid "Rect"
+msgstr "Rect"
+
+#. Key:	MacroControlInfo:Rect
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroControlInfo:Rect [StructProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroControlInfo:Rect [StructProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroControlInfo:Rect"
+msgid "Layout rectangle in key-width units: position and size on the device."
+msgstr "Layout rectangle in key-width units: position and size on the device."
+
+#. Key:	MacroKeyboardSettings
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings [Class DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings [Class DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSettings"
+msgid "MacroKeyboard"
+msgstr "MacroKeyboard"
+
+#. Key:	MacroKeyboardSettings
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings [Class ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings [Class ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSettings"
+msgid "Project Settings → Plugins → MacroKeyboard."
+msgstr "Project Settings → Plugins → MacroKeyboard."
+
+#. Key:	MacroKeyboardSettings:AppId
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:AppId [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:AppId [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSettings:AppId"
+msgid "App Id"
+msgstr "App Id"
+
+#. Key:	MacroKeyboardSettings:AppId
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:AppId [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:AppId [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSettings:AppId"
+msgid "Identifies this client in MacroHub's web UI."
+msgstr "Identifies this client in MacroHub's web UI."
+
+#. Key:	Connection
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:bEnabled [BoolProperty Category meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:bEnabled [BoolProperty Category meta-data]
+msgctxt "UObjectCategory,Connection"
+msgid "Connection"
+msgstr "Connection"
+
+#. Key:	MacroKeyboardSettings:bEnabled
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:bEnabled [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:bEnabled [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSettings:bEnabled"
+msgid "Enabled"
+msgstr "Enabled"
+
+#. Key:	MacroKeyboardSettings:bEnabled
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:bEnabled [BoolProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:bEnabled [BoolProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSettings:bEnabled"
+msgid "Connect to MacroHub. Turn off to leave the pad to MacroHub's own shortcut layers."
+msgstr "Connect to MacroHub. Turn off to leave the pad to MacroHub's own shortcut layers."
+
+#. Key:	Diagnostics
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:bLogEvents [BoolProperty Category meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:bLogEvents [BoolProperty Category meta-data]
+msgctxt "UObjectCategory,Diagnostics"
+msgid "Diagnostics"
+msgstr "Diagnostics"
+
+#. Key:	MacroKeyboardSettings:bLogEvents
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:bLogEvents [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:bLogEvents [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSettings:bLogEvents"
+msgid "Log Raw Hub Events"
+msgstr "Log Raw Hub Events"
+
+#. Key:	MacroKeyboardSettings:bLogEvents
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:bLogEvents [BoolProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:bLogEvents [BoolProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSettings:bLogEvents"
+msgid "Write every raw control event received from MacroHub to the Output Log (\"KNOB_CW down (knob/cw seq=…)\").\nOff by default. What the editor then does with each event has its own switch in Editor Preferences →\nPlugins → MacroKeyboard (Editor) → Diagnostics."
+msgstr "Write every raw control event received from MacroHub to the Output Log (\"KNOB_CW down (knob/cw seq=…)\").\nOff by default. What the editor then does with each event has its own switch in Editor Preferences →\nPlugins → MacroKeyboard (Editor) → Diagnostics."
+
+#. Key:	MacroKeyboardSettings:PipeName
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:PipeName [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:PipeName [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSettings:PipeName"
+msgid "Pipe Name"
+msgstr "Pipe Name"
+
+#. Key:	MacroKeyboardSettings:PipeName
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:PipeName [StrProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:PipeName [StrProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSettings:PipeName"
+msgid "Named pipe published by MacroHub (its --pipe argument), without the \\\\.\\pipe\\ prefix."
+msgstr "Named pipe published by MacroHub (its --pipe argument), without the \\\\.\\pipe\\ prefix."
+
+#. Key:	MacroKeyboardSettings:ReconnectSeconds
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:ReconnectSeconds [FloatProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:ReconnectSeconds [FloatProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSettings:ReconnectSeconds"
+msgid "Reconnect Seconds"
+msgstr "Reconnect Seconds"
+
+#. Key:	MacroKeyboardSettings:ReconnectSeconds
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSettings:ReconnectSeconds [FloatProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSettings:ReconnectSeconds [FloatProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSettings:ReconnectSeconds"
+msgid "Seconds between reconnect attempts while MacroHub is not running (grows up to 4x)."
+msgstr "Seconds between reconnect attempts while MacroHub is not running (grows up to 4x)."
+
+#. Key:	MacroKeyboardSubsystem
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem [Class DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem [Class DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem"
+msgid "Macro Keyboard Subsystem"
+msgstr "Macro Keyboard Subsystem"
+
+#. Key:	MacroKeyboardSubsystem
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem [Class ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem [Class ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSubsystem"
+msgid "Owns the MacroHub connection and delivers control events on the game thread.\n\nLives in the editor and in game builds; the editor module adds context detection and editor actions on top.\nEvents arrive on a background thread and are drained once per frame, so handlers run at a predictable point."
+msgstr "Owns the MacroHub connection and delivers control events on the game thread.\n\nLives in the editor and in game builds; the editor module adds context detection and editor actions on top.\nEvents arrive on a background thread and are drained once per frame, so handlers run at a predictable point."
+
+#. Key:	MacroKeyboardSubsystem:DescribeConnection:ReturnValue
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:DescribeConnection:ReturnValue [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:DescribeConnection:ReturnValue [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:DescribeConnection:ReturnValue"
+msgid "Return Value"
+msgstr "Return Value"
+
+#. Key:	MacroKeyboardSubsystem:GetConnectionState:ReturnValue
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:GetConnectionState:ReturnValue [EnumProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:GetConnectionState:ReturnValue [EnumProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:GetConnectionState:ReturnValue"
+msgid "Return Value"
+msgstr "Return Value"
+
+#. Key:	MacroKeyboardSubsystem:GetControls:ReturnValue
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:GetControls:ReturnValue [ArrayProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:GetControls:ReturnValue [ArrayProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:GetControls:ReturnValue"
+msgid "Return Value"
+msgstr "Return Value"
+
+#. Key:	MacroKeyboardSubsystem:GetReportedContext:ReturnValue
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:GetReportedContext:ReturnValue [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:GetReportedContext:ReturnValue [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:GetReportedContext:ReturnValue"
+msgid "Return Value"
+msgstr "Return Value"
+
+#. Key:	MacroKeyboardSubsystem:IsConnected:ReturnValue
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:IsConnected:ReturnValue [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:IsConnected:ReturnValue [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:IsConnected:ReturnValue"
+msgid "Return Value"
+msgstr "Return Value"
+
+#. Key:	MacroKeyboardSubsystem:IsPadConnected:ReturnValue
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:IsPadConnected:ReturnValue [BoolProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:IsPadConnected:ReturnValue [BoolProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:IsPadConnected:ReturnValue"
+msgid "Return Value"
+msgstr "Return Value"
+
+#. Key:	MacroKeyboardSubsystem:OnControlEventBP
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:OnControlEventBP [MulticastInlineDelegateProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:OnControlEventBP [MulticastInlineDelegateProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:OnControlEventBP"
+msgid "On Control Event BP"
+msgstr "On Control Event BP"
+
+#. Key:	MacroKeyboardSubsystem:OnControlEventBP
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:OnControlEventBP [MulticastInlineDelegateProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:OnControlEventBP [MulticastInlineDelegateProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroKeyboardSubsystem:OnControlEventBP"
+msgid "Blueprint listeners."
+msgstr "Blueprint listeners."
+
+#. Key:	MacroKeyboardSubsystem:ReportContext:ContextName
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:ReportContext:ContextName [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:ReportContext:ContextName [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:ReportContext:ContextName"
+msgid "Context Name"
+msgstr "Context Name"
+
+#. Key:	MacroKeyboardSubsystem:ReportContext:Detail
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:ReportContext:Detail [StrProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:ReportContext:Detail [StrProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:ReportContext:Detail"
+msgid "Detail"
+msgstr "Detail"
+
+#. Key:	MacroKeyboardSubsystem:SetLighting:Spec
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:SetLighting:Spec [StructProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroKeyboardSubsystem:SetLighting:Spec [StructProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroKeyboardSubsystem:SetLighting:Spec"
+msgid "Spec"
+msgstr "Spec"
+
+#. Key:	MacroLightingSpec
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec [ScriptStruct DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec [ScriptStruct DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroLightingSpec"
+msgid "Macro Lighting Spec"
+msgstr "Macro Lighting Spec"
+
+#. Key:	MacroLightingSpec
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec [ScriptStruct ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec [ScriptStruct ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroLightingSpec"
+msgid "Backlight state of the pad, mirroring what MacroHub's own lighting panel offers. The Hub clamps anything out of\nrange, so these are the values the firmware actually has."
+msgstr "Backlight state of the pad, mirroring what MacroHub's own lighting panel offers. The Hub clamps anything out of\nrange, so these are the values the firmware actually has."
+
+#. Key:	MacroLightingSpec:Brightness
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Brightness [IntProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Brightness [IntProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroLightingSpec:Brightness"
+msgid "Brightness"
+msgstr "Brightness"
+
+#. Key:	MacroLightingSpec:Brightness
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Brightness [IntProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Brightness [IntProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroLightingSpec:Brightness"
+msgid "1 (dimmest) to 6 (brightest)."
+msgstr "1 (dimmest) to 6 (brightest)."
+
+#. Key:	MacroLightingSpec:Color
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Color [StructProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Color [StructProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroLightingSpec:Color"
+msgid "Color"
+msgstr "Color"
+
+#. Key:	MacroLightingSpec:Direction
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Direction [IntProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Direction [IntProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroLightingSpec:Direction"
+msgid "Direction"
+msgstr "Direction"
+
+#. Key:	MacroLightingSpec:Direction
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Direction [IntProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Direction [IntProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroLightingSpec:Direction"
+msgid "0 or 1; only the flowing effects use it."
+msgstr "0 or 1; only the flowing effects use it."
+
+#. Key:	MacroLightingSpec:Mode
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Mode [IntProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Mode [IntProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroLightingSpec:Mode"
+msgid "Mode"
+msgstr "Mode"
+
+#. Key:	MacroLightingSpec:Mode
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Mode [IntProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Mode [IntProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroLightingSpec:Mode"
+msgid "Effect: 1 Solid · 2 Flowing · 3 Marquee · 4 Breathing · 5 Cycling breath · 6 Tetris · 7 Neon · 8 Rainbow flow · 9 Off"
+msgstr "Effect: 1 Solid · 2 Flowing · 3 Marquee · 4 Breathing · 5 Cycling breath · 6 Tetris · 7 Neon · 8 Rainbow flow · 9 Off"
+
+#. Key:	MacroLightingSpec:Speed
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Speed [IntProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Speed [IntProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,MacroLightingSpec:Speed"
+msgid "Speed"
+msgstr "Speed"
+
+#. Key:	MacroLightingSpec:Speed
+#. SourceLocation:	/Script/MacroKeyboardRuntime.MacroLightingSpec:Speed [IntProperty ToolTip meta-data]
+#: /Script/MacroKeyboardRuntime.MacroLightingSpec:Speed [IntProperty ToolTip meta-data]
+msgctxt "UObjectToolTips,MacroLightingSpec:Speed"
+msgid "0 (slowest) to 5 (fastest); only the animated effects use it."
+msgstr "0 (slowest) to 5 (fastest); only the animated effects use it."
+
+#. Key:	OnMacroControlEventBP__DelegateSignature:Event
+#. SourceLocation:	/Script/MacroKeyboardRuntime.OnMacroControlEventBP__DelegateSignature:Event [StructProperty DisplayName meta-data]
+#: /Script/MacroKeyboardRuntime.OnMacroControlEventBP__DelegateSignature:Event [StructProperty DisplayName meta-data]
+msgctxt "UObjectDisplayNames,OnMacroControlEventBP__DelegateSignature:Event"
+msgid "Event"
+msgstr "Event"
+
+#. Key:	StatusOff
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(136)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(136)
+msgctxt "MacroKeyboard,StatusOff"
+msgid "Macro pad: MacroHub not connected (make sure MacroHub is running)\nClick to open the setup panel"
+msgstr "Macro pad: MacroHub not connected (make sure MacroHub is running)\nClick to open the setup panel"
+
+#. Key:	StatusOn
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(139)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(139)
+msgctxt "MacroKeyboard,StatusOn"
+msgid "Macro pad: connected\n{0}\nClick to open the setup panel"
+msgstr "Macro pad: connected\n{0}\nClick to open the setup panel"
+
+#. Key:	StatusNoPad
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(140)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(140)
+msgctxt "MacroKeyboard,StatusNoPad"
+msgid "Macro pad: MacroHub is connected but no pad was found\n{0}\nClick to open the setup panel"
+msgstr "Macro pad: MacroHub is connected but no pad was found\n{0}\nClick to open the setup panel"
+
+#. Key:	StatusLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(177)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(177)
+msgctxt "MacroKeyboard,StatusLabel"
+msgid "Macro pad"
+msgstr "Macro pad"
+
+#. Key:	PanelTitle
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(52)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(52)
+msgctxt "MacroKeyboard,PanelTitle"
+msgid "MacroKeyboard"
+msgstr "MacroKeyboard"
+
+#. Key:	PanelTooltip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(53)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardEditorModule.cpp(53)
+msgctxt "MacroKeyboard,PanelTooltip"
+msgid "Macro pad: set what each control does per editor context"
+msgstr "Macro pad: set what each control does per editor context"
+
+#. Key:	PanelCategory
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardSettingsCustomization.cpp(24)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardSettingsCustomization.cpp(24)
+msgctxt "MacroKeyboard,PanelCategory"
+msgid "Setup panel"
+msgstr "Setup panel"
+
+#. Key:	PanelRowFilter
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardSettingsCustomization.cpp(26)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardSettingsCustomization.cpp(26)
+msgctxt "MacroKeyboard,PanelRowFilter"
+msgid "setup panel keyboard lighting"
+msgstr "setup panel keyboard lighting"
+
+#. Key:	PanelHint
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardSettingsCustomization.cpp(37)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/MacroKeyboardSettingsCustomization.cpp(37)
+msgctxt "MacroKeyboard,PanelHint"
+msgid "Click a key on the pad to edit its binding; the backlight settings are on the right. The panel also opens as its own window from Window > Tools > MacroKeyboard."
+msgstr "Click a key on the pad to edit its binding; the backlight settings are on the right. The panel also opens as its own window from Window > Tools > MacroKeyboard."
+
+#. Key:	CtrlKnobCcw
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(101)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(101)
+msgctxt "MacroKeyboard,CtrlKnobCcw"
+msgid "Knob left"
+msgstr "Knob left"
+
+#. Key:	CtrlKnobCw
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(102)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(102)
+msgctxt "MacroKeyboard,CtrlKnobCw"
+msgid "Knob right"
+msgstr "Knob right"
+
+#. Key:	CtrlKnobPress
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(103)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(103)
+msgctxt "MacroKeyboard,CtrlKnobPress"
+msgid "Knob press"
+msgstr "Knob press"
+
+#. Key:	CtrlJoyUp
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(104)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(104)
+msgctxt "MacroKeyboard,CtrlJoyUp"
+msgid "Joystick up"
+msgstr "Joystick up"
+
+#. Key:	CtrlJoyDown
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(105)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(105)
+msgctxt "MacroKeyboard,CtrlJoyDown"
+msgid "Joystick down"
+msgstr "Joystick down"
+
+#. Key:	CtrlJoyLeft
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(106)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(106)
+msgctxt "MacroKeyboard,CtrlJoyLeft"
+msgid "Joystick left"
+msgstr "Joystick left"
+
+#. Key:	CtrlJoyRight
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(107)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(107)
+msgctxt "MacroKeyboard,CtrlJoyRight"
+msgid "Joystick right"
+msgstr "Joystick right"
+
+#. Key:	CtrlJoyPress
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(108)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(108)
+msgctxt "MacroKeyboard,CtrlJoyPress"
+msgid "Joystick press"
+msgstr "Joystick press"
+
+#. Key:	DeviceTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(349)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(349)
+msgctxt "MacroKeyboard,DeviceTip"
+msgid "Click a key, a knob zone or a joystick direction to edit what it does in the current context."
+msgstr "Click a key, a knob zone or a joystick direction to edit what it does in the current context."
+
+#. Key:	Unbound
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(359)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(359)
+msgctxt "MacroKeyboard,Unbound"
+msgid "Unbound"
+msgstr "Unbound"
+
+#. Key:	CapFrames
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(84)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(84)
+msgctxt "MacroKeyboard,CapFrames"
+msgid " fr"
+msgstr " fr"
+
+#. Key:	CapDetents
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(85)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(85)
+msgctxt "MacroKeyboard,CapDetents"
+msgid " det"
+msgstr " det"
+
+#. Key:	CapPlayPause
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(89)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(89)
+msgctxt "MacroKeyboard,CapPlayPause"
+msgid "Play/Pause"
+msgstr "Play/Pause"
+
+#. Key:	CapBlocked
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(93)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardDevice.cpp(93)
+msgctxt "MacroKeyboard,CapBlocked"
+msgid "Blocked"
+msgstr "Blocked"
+
+#. Key:	KnobAccel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1000)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1000)
+msgctxt "MacroKeyboard,KnobAccel"
+msgid "Speed acceleration"
+msgstr "Speed acceleration"
+
+#. Key:	SectionTrigger
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1004)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1004)
+msgctxt "MacroKeyboard,SectionTrigger"
+msgid "Trigger"
+msgstr "Trigger"
+
+#. Key:	OnRelease
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1013)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1013)
+msgctxt "MacroKeyboard,OnRelease"
+msgid "Trigger on release (default: on press)"
+msgstr "Trigger on release (default: on press)"
+
+#. Key:	KnobModifierNote
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1025)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1025)
+msgctxt "MacroKeyboard,KnobModifierNote"
+msgid "In this context the knob press is the hold-to-accelerate modifier: its binding runs on release, and not at all if the knob was turned while held."
+msgstr "In this context the knob press is the hold-to-accelerate modifier: its binding runs on release, and not at all if the knob was turned while held."
+
+#. Key:	RestoreDefaultsTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1041)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1041)
+msgctxt "MacroKeyboard,RestoreDefaultsTip"
+msgid "Replace every binding in every context with the plugin’s defaults"
+msgstr "Replace every binding in every context with the plugin’s defaults"
+
+#. Key:	RestoreDefaultsConfirm
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1045)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1045)
+msgctxt "MacroKeyboard,RestoreDefaultsConfirm"
+msgid "Replace every binding in every context with the plugin defaults? Your current bindings will be lost."
+msgstr "Replace every binding in every context with the plugin defaults? Your current bindings will be lost."
+
+#. Key:	RestoreDefaults
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1055)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(1055)
+msgctxt "MacroKeyboard,RestoreDefaults"
+msgid "Restore default bindings…"
+msgstr "Restore default bindings…"
+
+#. Key:	NoSubsystem
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(196)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(196)
+msgctxt "MacroKeyboard,NoSubsystem"
+msgid "MacroKeyboard is not initialised"
+msgstr "MacroKeyboard is not initialised"
+
+#. Key:	HubOffline
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(197)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(197)
+msgctxt "MacroKeyboard,HubOffline"
+msgid "MacroHub not connected"
+msgstr "MacroHub not connected"
+
+#. Key:	PadOnline
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(199)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(199)
+msgctxt "MacroKeyboard,PadOnline"
+msgid "MacroHub connected · pad online"
+msgstr "MacroHub connected · pad online"
+
+#. Key:	PadOffline
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(200)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(200)
+msgctxt "MacroKeyboard,PadOffline"
+msgid "MacroHub connected · pad not connected"
+msgstr "MacroHub connected · pad not connected"
+
+#. Key:	EditContext
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(207)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(207)
+msgctxt "MacroKeyboard,EditContext"
+msgid "Editing context"
+msgstr "Editing context"
+
+#. Key:	FollowTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(237)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(237)
+msgctxt "MacroKeyboard,FollowTip"
+msgid "The edited context follows the editor’s focus; untick to choose one yourself"
+msgstr "The edited context follows the editor’s focus; untick to choose one yourself"
+
+#. Key:	Follow
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(245)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(245)
+msgctxt "MacroKeyboard,Follow"
+msgid "Follow editor"
+msgstr "Follow editor"
+
+#. Key:	OpenPanelWindow
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(252)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(252)
+msgctxt "MacroKeyboard,OpenPanelWindow"
+msgid "Open in its own window"
+msgstr "Open in its own window"
+
+#. Key:	OpenPanelWindowTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(253)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(253)
+msgctxt "MacroKeyboard,OpenPanelWindowTip"
+msgid "Open this panel as a separate editor window"
+msgstr "Open this panel as a separate editor window"
+
+#. Key:	OpenHub
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(263)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(263)
+msgctxt "MacroKeyboard,OpenHub"
+msgid "MacroHub setup page"
+msgstr "MacroHub setup page"
+
+#. Key:	OpenHubTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(264)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(264)
+msgctxt "MacroKeyboard,OpenHubTip"
+msgid "Open MacroHub’s device and forwarding settings in the browser"
+msgstr "Open MacroHub’s device and forwarding settings in the browser"
+
+#. Key:	LightMode
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(456)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(456)
+msgctxt "MacroKeyboard,LightMode"
+msgid "Mode"
+msgstr "Mode"
+
+#. Key:	LightBright
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(483)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(483)
+msgctxt "MacroKeyboard,LightBright"
+msgid "Brightness"
+msgstr "Brightness"
+
+#. Key:	LightBrightFmt
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(484)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(484)
+msgctxt "MacroKeyboard,LightBrightFmt"
+msgid "{0} / 6"
+msgstr "{0} / 6"
+
+#. Key:	LightMode1
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(50)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(50)
+msgctxt "MacroKeyboard,LightMode1"
+msgid "Solid"
+msgstr "Solid"
+
+#. Key:	LightMode2
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(50)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(50)
+msgctxt "MacroKeyboard,LightMode2"
+msgid "Flowing"
+msgstr "Flowing"
+
+#. Key:	LightMode3
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(50)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(50)
+msgctxt "MacroKeyboard,LightMode3"
+msgid "Marquee"
+msgstr "Marquee"
+
+#. Key:	LightColor
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(500)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(500)
+msgctxt "MacroKeyboard,LightColor"
+msgid "Colour"
+msgstr "Colour"
+
+#. Key:	LightColorTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(508)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(508)
+msgctxt "MacroKeyboard,LightColorTip"
+msgid "Click to pick a colour"
+msgstr "Click to pick a colour"
+
+#. Key:	LightMode4
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(51)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(51)
+msgctxt "MacroKeyboard,LightMode4"
+msgid "Breathing"
+msgstr "Breathing"
+
+#. Key:	LightMode5
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(51)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(51)
+msgctxt "MacroKeyboard,LightMode5"
+msgid "Cycling breath"
+msgstr "Cycling breath"
+
+#. Key:	LightMode6
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(51)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(51)
+msgctxt "MacroKeyboard,LightMode6"
+msgid "Tetris"
+msgstr "Tetris"
+
+#. Key:	LightMode7
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(52)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(52)
+msgctxt "MacroKeyboard,LightMode7"
+msgid "Neon"
+msgstr "Neon"
+
+#. Key:	LightMode8
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(52)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(52)
+msgctxt "MacroKeyboard,LightMode8"
+msgid "Rainbow flow"
+msgstr "Rainbow flow"
+
+#. Key:	LightMode9
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(52)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(52)
+msgctxt "MacroKeyboard,LightMode9"
+msgid "Off"
+msgstr "Off"
+
+#. Key:	LightSpeed
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(537)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(537)
+msgctxt "MacroKeyboard,LightSpeed"
+msgid "Speed"
+msgstr "Speed"
+
+#. Key:	LightSpeedFmt
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(538)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(538)
+msgctxt "MacroKeyboard,LightSpeedFmt"
+msgid "{0} / 5"
+msgstr "{0} / 5"
+
+#. Key:	LightDir
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(552)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(552)
+msgctxt "MacroKeyboard,LightDir"
+msgid "Direction"
+msgstr "Direction"
+
+#. Key:	LightDirCw
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(558)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(558)
+msgctxt "MacroKeyboard,LightDirCw"
+msgid "Clockwise"
+msgstr "Clockwise"
+
+#. Key:	LightDirCcw
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(559)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(559)
+msgctxt "MacroKeyboard,LightDirCcw"
+msgid "Anticlockwise"
+msgstr "Anticlockwise"
+
+#. Key:	LightPerContextTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(567)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(567)
+msgctxt "MacroKeyboard,LightPerContextTip"
+msgid "Gives this context its own lighting, applied whenever it comes to the front"
+msgstr "Gives this context its own lighting, applied whenever it comes to the front"
+
+#. Key:	LightPerContext
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(593)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(593)
+msgctxt "MacroKeyboard,LightPerContext"
+msgid "Per context"
+msgstr "Per context"
+
+#. Key:	LightTitle
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(606)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(606)
+msgctxt "MacroKeyboard,LightTitle"
+msgid "Pad lighting"
+msgstr "Pad lighting"
+
+#. Key:	LightDriveTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(611)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(611)
+msgctxt "MacroKeyboard,LightDriveTip"
+msgid "When on, the editor sets the pad’s backlight per context; when off, MacroHub controls it again"
+msgstr "When on, the editor sets the pad’s backlight per context; when off, MacroHub controls it again"
+
+#. Key:	ContextAll
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(62)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(62)
+msgctxt "MacroKeyboard,ContextAll"
+msgid "All contexts (generic)"
+msgstr "All contexts (generic)"
+
+#. Key:	LightDrive
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(623)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(623)
+msgctxt "MacroKeyboard,LightDrive"
+msgid "Take over"
+msgstr "Take over"
+
+#. Key:	ContextLevel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(63)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(63)
+msgctxt "MacroKeyboard,ContextLevel"
+msgid "Level Editor"
+msgstr "Level Editor"
+
+#. Key:	LightOff
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(635)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(635)
+msgctxt "MacroKeyboard,LightOff"
+msgid "Not taken over: MacroHub controls the backlight"
+msgstr "Not taken over: MacroHub controls the backlight"
+
+#. Key:	LightOwnFmt
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(638)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(638)
+msgctxt "MacroKeyboard,LightOwnFmt"
+msgid "Lighting for “{0}”"
+msgstr "Lighting for “{0}”"
+
+#. Key:	LightShared
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(639)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(639)
+msgctxt "MacroKeyboard,LightShared"
+msgid "Shared by all contexts"
+msgstr "Shared by all contexts"
+
+#. Key:	ContextSequencer
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(64)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(64)
+msgctxt "MacroKeyboard,ContextSequencer"
+msgid "Sequencer"
+msgstr "Sequencer"
+
+#. Key:	ContextAnim
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(65)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(65)
+msgctxt "MacroKeyboard,ContextAnim"
+msgid "Animation Editor"
+msgstr "Animation Editor"
+
+#. Key:	ContextAnimBP
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(66)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(66)
+msgctxt "MacroKeyboard,ContextAnimBP"
+msgid "Animation Blueprint"
+msgstr "Animation Blueprint"
+
+#. Key:	ContextPie
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(67)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(67)
+msgctxt "MacroKeyboard,ContextPie"
+msgid "Playing in Editor"
+msgstr "Playing in Editor"
+
+#. Key:	ContextSimulate
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(68)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(68)
+msgctxt "MacroKeyboard,ContextSimulate"
+msgid "Simulate"
+msgstr "Simulate"
+
+#. Key:	ActionChord
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(76)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(76)
+msgctxt "MacroKeyboard,ActionChord"
+msgid "Editor shortcut"
+msgstr "Editor shortcut"
+
+#. Key:	ActionCommand
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(77)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(77)
+msgctxt "MacroKeyboard,ActionCommand"
+msgid "Editor command (by name)"
+msgstr "Editor command (by name)"
+
+#. Key:	BindingTitle
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(776)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(776)
+msgctxt "MacroKeyboard,BindingTitle"
+msgid "Key settings"
+msgstr "Key settings"
+
+#. Key:	ActionConsole
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(78)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(78)
+msgctxt "MacroKeyboard,ActionConsole"
+msgid "Console command"
+msgstr "Console command"
+
+#. Key:	PickControl
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(780)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(780)
+msgctxt "MacroKeyboard,PickControl"
+msgid "Click a key, a knob zone or a joystick direction above to edit it; pressing a physical key highlights it."
+msgstr "Click a key, a knob zone or a joystick direction above to edit it; pressing a physical key highlights it."
+
+#. Key:	NoDevice
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(781)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(781)
+msgctxt "MacroKeyboard,NoDevice"
+msgid "Waiting for MacroHub to send the pad layout… (make sure MacroHub is running)"
+msgstr "Waiting for MacroHub to send the pad layout… (make sure MacroHub is running)"
+
+#. Key:	ActionScrub
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(79)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(79)
+msgctxt "MacroKeyboard,ActionScrub"
+msgid "Timeline scrub"
+msgstr "Timeline scrub"
+
+#. Key:	ActionPlay
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(80)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(80)
+msgctxt "MacroKeyboard,ActionPlay"
+msgid "Timeline play / pause"
+msgstr "Timeline play / pause"
+
+#. Key:	ActionNone
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(81)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(81)
+msgctxt "MacroKeyboard,ActionNone"
+msgid "None (block)"
+msgstr "None (block)"
+
+#. Key:	EditingFmt
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(819)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(819)
+msgctxt "MacroKeyboard,EditingFmt"
+msgid "in “{0}”"
+msgstr "in “{0}”"
+
+#. Key:	ClearBinding
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(825)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(825)
+msgctxt "MacroKeyboard,ClearBinding"
+msgid "Remove binding"
+msgstr "Remove binding"
+
+#. Key:	ClearBindingTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(826)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(826)
+msgctxt "MacroKeyboard,ClearBindingTip"
+msgid "Removes this context’s binding; if there is an “All contexts” binding, the control inherits it again"
+msgstr "Removes this context’s binding; if there is an “All contexts” binding, the control inherits it again"
+
+#. Key:	InheritedFmt
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(839)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(839)
+msgctxt "MacroKeyboard,InheritedFmt"
+msgid "Currently inherited from “All contexts”: {0}. Pick an action below to override it for this context only."
+msgstr "Currently inherited from “All contexts”: {0}. Pick an action below to override it for this context only."
+
+#. Key:	SectionAction
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(846)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(846)
+msgctxt "MacroKeyboard,SectionAction"
+msgid "Action"
+msgstr "Action"
+
+#. Key:	ActionLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(847)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(847)
+msgctxt "MacroKeyboard,ActionLabel"
+msgid "Action type"
+msgstr "Action type"
+
+#. Key:	PickAction
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(879)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(879)
+msgctxt "MacroKeyboard,PickAction"
+msgid "Pick an action to create a binding for this context."
+msgstr "Pick an action to create a binding for this context."
+
+#. Key:	ChordLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(889)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(889)
+msgctxt "MacroKeyboard,ChordLabel"
+msgid "Shortcut"
+msgstr "Shortcut"
+
+#. Key:	ChordTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(898)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(898)
+msgctxt "MacroKeyboard,ChordTip"
+msgid "Click, then press the key combination"
+msgstr "Click, then press the key combination"
+
+#. Key:	CommandCtxLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(902)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(902)
+msgctxt "MacroKeyboard,CommandCtxLabel"
+msgid "Binding context"
+msgstr "Binding context"
+
+#. Key:	CommandCtxHint
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(905)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(905)
+msgctxt "MacroKeyboard,CommandCtxHint"
+msgid "e.g. Sequencer"
+msgstr "e.g. Sequencer"
+
+#. Key:	CommandNameLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(911)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(911)
+msgctxt "MacroKeyboard,CommandNameLabel"
+msgid "Command name"
+msgstr "Command name"
+
+#. Key:	CommandNameHint
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(914)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(914)
+msgctxt "MacroKeyboard,CommandNameHint"
+msgid "e.g. TogglePlay"
+msgstr "e.g. TogglePlay"
+
+#. Key:	ConsoleLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(923)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(923)
+msgctxt "MacroKeyboard,ConsoleLabel"
+msgid "Console command"
+msgstr "Console command"
+
+#. Key:	ConsoleHint
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(926)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(926)
+msgctxt "MacroKeyboard,ConsoleHint"
+msgid "e.g. stat fps"
+msgstr "e.g. stat fps"
+
+#. Key:	FramesLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(935)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(935)
+msgctxt "MacroKeyboard,FramesLabel"
+msgid "Frames per step"
+msgstr "Frames per step"
+
+#. Key:	DisplayNameLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(947)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(947)
+msgctxt "MacroKeyboard,DisplayNameLabel"
+msgid "Display name"
+msgstr "Display name"
+
+#. Key:	DisplayNameHint
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(950)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(950)
+msgctxt "MacroKeyboard,DisplayNameHint"
+msgid "Default: {0}"
+msgstr "Default: {0}"
+
+#. Key:	DisplayNameTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(963)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(963)
+msgctxt "MacroKeyboard,DisplayNameTip"
+msgid "Text shown on the key cap instead of the action summary (such as the shortcut). Leave empty for the default. Only affects this binding in this context."
+msgstr "Text shown on the key cap instead of the action summary (such as the shortcut). Leave empty for the default. Only affects this binding in this context."
+
+#. Key:	SectionKnob
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(970)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(970)
+msgctxt "MacroKeyboard,SectionKnob"
+msgid "Knob"
+msgstr "Knob"
+
+#. Key:	DetentsLabel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(971)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(971)
+msgctxt "MacroKeyboard,DetentsLabel"
+msgid "Detents per trigger"
+msgstr "Detents per trigger"
+
+#. Key:	DetentsTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(980)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(980)
+msgctxt "MacroKeyboard,DetentsTip"
+msgid "Each click of the knob reports several steps (2 on the W909): 2 means one trigger per click."
+msgstr "Each click of the knob reports several steps (2 on the W909): 2 means one trigger per click."
+
+#. Key:	HoldAccel
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(981)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(981)
+msgctxt "MacroKeyboard,HoldAccel"
+msgid "Hold-to-turn multiplier"
+msgstr "Hold-to-turn multiplier"
+
+#. Key:	HoldAccelTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(990)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(990)
+msgctxt "MacroKeyboard,HoldAccelTip"
+msgid "Turning while holding the knob down multiplies each step by this; releasing the knob goes straight back to normal. 1 = off.\nAbove 1, the knob press’s own binding in this context runs on release, and not at all if the knob was turned while held."
+msgstr "Turning while holding the knob down multiplies each step by this; releasing the knob goes straight back to normal. 1 = off.\nAbove 1, the knob press’s own binding in this context runs on release, and not at all if the knob was turned while held."
+
+#. Key:	KnobAccelTip
+#. SourceLocation:	Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(993)
+#: Plugins/MacroKeyboard/Source/MacroKeyboardEditor/Private/SMacroKeyboardPanel.cpp(993)
+msgctxt "MacroKeyboard,KnobAccelTip"
+msgid "Turning quickly moves further per step (×2 under 90 ms between steps, ×5 under 40 ms). Turn off when every click must be exactly one frame."
+msgstr "Turning quickly moves further per step (×2 under 90 ms between steps, ×5 under 40 ms). Turn off when every click must be exactly one frame."
+

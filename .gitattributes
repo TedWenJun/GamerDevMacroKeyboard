@@ -1,0 +1,28 @@
+# Normalize text to LF in the repository; check out with the platform default.
+* text=auto
+
+# Sources and docs
+*.cs     text diff=csharp
+*.csproj text
+*.slnx   text
+*.props  text
+*.json   text
+*.md     text diff=markdown
+*.js     text
+*.mjs    text
+*.css    text
+*.html   text diff=html
+*.py     text diff=python
+*.yml    text
+*.yaml   text
+
+# Windows scripts must keep CRLF to run reliably in Windows PowerShell 5.1
+*.ps1    text eol=crlf
+*.cmd    text eol=crlf
+*.bat    text eol=crlf
+
+# Binary
+*.png    binary
+*.jpg    binary
+*.ico    binary
+*.zip    binary

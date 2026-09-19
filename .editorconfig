@@ -1,0 +1,31 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{js,mjs,css,html,json,yml,yaml,props,csproj,slnx}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{ps1,cmd,bat}]
+end_of_line = crlf
+
+[*.cs]
+csharp_style_namespace_declarations = file_scoped:suggestion
+csharp_new_line_before_open_brace = all
+csharp_style_var_for_built_in_types = true:silent
+csharp_style_var_when_type_is_apparent = true:silent
+dotnet_sort_system_directives_first = true
+dotnet_style_readonly_field = true:suggestion
+
+# Unreal Engine source follows the Epic coding standard (tabs)
+[unreal/**.{h,cpp,cs}]
+indent_style = tab
+indent_size = 4

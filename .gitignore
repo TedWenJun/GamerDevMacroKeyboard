@@ -1,0 +1,44 @@
+# ── Private materials (not published) ─────────────────────────────────────────
+# Doc/ holds the vendor's product marketing images (copyrighted) and personal research notes.
+# Published documentation lives in docs/.
+/Doc/
+
+# ── .NET build output ─────────────────────────────────────────────────────────
+[Bb]in/
+[Oo]bj/
+[Aa]rtifacts/
+[Pp]ublish/
+*.user
+*.suo
+*.userprefs
+.vs/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.DotSettings.user
+TestResults/
+*.trx
+*.coverage
+coverage*.xml
+
+# ── Runtime data ──────────────────────────────────────────────────────────────
+*.log
+*.log.[0-9]
+tests/e2e/.run/
+tools/InputRecorder/stdout.txt
+
+# ── Node (e2e test runner has no dependencies, but keep it clean) ─────────────
+node_modules/
+
+# ── OS / editor noise ─────────────────────────────────────────────────────────
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# ── Unreal Engine plugin build output ────────────────────────────────────────
+unreal/**/Binaries/
+unreal/**/Intermediate/
+unreal/**/Saved/
+unreal/**/DerivedDataCache/

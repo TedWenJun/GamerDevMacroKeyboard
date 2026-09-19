@@ -1,0 +1,53 @@
+name: Bug report / Bug 报告
+description: MacroHub or the Unreal plugin does not behave as expected / MacroHub 或 UE 插件行为不符合预期
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please do not report security problems here; see SECURITY.md. / 安全问题请不要在这里提交，见 SECURITY.zh-CN.md。
+  - type: input
+    id: version
+    attributes:
+      label: MacroHub version / MacroHub 版本
+      description: '`version` in http://127.0.0.1:17900/api/state / 界面 /api/state 中的 version'
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version / Windows 版本
+      placeholder: Windows 11 24H2 (26100)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Pad model and connection / 宏键盘型号与连接方式
+      placeholder: SXS-W909, USB cable / 2.4G / Bluetooth
+  - type: input
+    id: unreal
+    attributes:
+      label: Unreal Engine version (plugin issues only) / UE 版本（仅插件问题）
+      placeholder: 5.8
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      placeholder: |
+        1. Bind K1 to … in the "Office" layer / 在“通用办公”层把 K1 绑定为 …
+        2. Press … / 按下 …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result / 期望结果与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / 日志
+      description: 'Relevant lines from %LOCALAPPDATA%\MacroHub\logs\macrohub.log (and the "Live events" tab, or the UE Output Log) / macrohub.log 中的相关片段；可附“实时事件”页或 UE 输出日志'
+      render: text

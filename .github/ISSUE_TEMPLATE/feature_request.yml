@@ -1,0 +1,21 @@
+name: Feature request / device support · 功能建议 / 设备支持
+description: New features, improvements, or support for another macro pad / 新功能、改进，或希望支持新的宏键盘
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve? / 想解决什么问题
+      description: The use case, and why it is impossible or awkward today / 使用场景是什么，现在为什么做不到或不方便
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution / 建议的方案
+  - type: textarea
+    id: device
+    attributes:
+      label: Device information (for new device support) / 设备信息（申请支持新设备时填写）
+      description: Model, VID/PID and the output of `dotnet run --project tools/HidProbe -- vid_xxxx&pid_xxxx` / 型号、VID/PID 与 HidProbe 输出
+      render: text

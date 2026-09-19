@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MacroHub.Core/MacroHub.Core.csproj" />
+    <Project Path="src/MacroHub/MacroHub.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MacroHub.Core.Tests/MacroHub.Core.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/HidProbe/HidProbe.csproj" />
+    <Project Path="tools/HookOrderTest/HookOrderTest.csproj" />
+    <Project Path="tools/InputRecorder/InputRecorder.csproj" />
+    <Project Path="tools/KeyTarget/KeyTarget.csproj" />
+  </Folder>
+</Solution>
