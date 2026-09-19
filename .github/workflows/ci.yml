@@ -48,13 +48,13 @@ jobs:
         shell: pwsh
         run: ./scripts/publish.ps1 -SkipTests -Version "0.0.0-ci.${{ github.run_number }}"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: MacroHub-win-x64
           path: artifacts/*.zip*
           retention-days: 14
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: test-results
