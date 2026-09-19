@@ -17,7 +17,7 @@ as the Unreal Engine plugin) to handle natively. This page follows the features;
 4. Click **Save & apply** (top right); it takes effect immediately, no restart needed.
 5. Click **Set active** to make the pad use that layer.
 
-The interface language follows your browser; the **EN / 中文** button in the top bar switches it.
+The interface language follows your browser; the **EN / 中文** button in the top bar switches it. Layer, function, category and control names that are still the defaults follow the interface language; names you changed or created are shown as you typed them. “Restore defaults” uses the defaults in the interface language.
 
 ## Concepts {#concepts}
 
@@ -385,6 +385,11 @@ volume straight back; this is expected, see [Knob volume guard](#volume-guard).
 only, create a new function and bind that.
 
 ## Changelog {#changelog}
+
+### Unreleased {#unreleased}
+- Lighting “Direction” uses rotation icons ↻ (clockwise) / ↺ (counter-clockwise); hover for the name.
+- In the English interface the default layer, function, category and control names (including the function names on the key caps) are shown in English too; English names on the caps are shortened by width instead of after 7 characters.
+- “Restore defaults” uses the defaults in the interface language.
 
 ### 2026-09-20 · 0.2.0 {#v0-2-0}
 - The interface and the help are available in English and Chinese (**EN / 中文** in the top bar).

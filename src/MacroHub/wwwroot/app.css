@@ -100,6 +100,7 @@ ul.plain li { padding: 3px 0; border-bottom: 1px solid var(--line); }
 .seg button { flex: 1; padding: 4px 0; background: var(--key); border: 1px solid var(--line); color: var(--text);
   border-radius: 6px; cursor: pointer; font-size: 13px; }
 .seg button.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.seg button.dir-icon { font-size: 18px; line-height: 1; padding: 3px 0 5px; }
 .light-panel[data-off="1"] .field, .light-panel[data-off="1"] .light-color { opacity: .45; pointer-events: none; }
 @media (max-width: 900px) {
   .device-row { flex-direction: column; }

@@ -74,7 +74,7 @@ const confirmModal = (title, lines, okText = t('确定'), danger = true) =>
   modal({ title, body: [].concat(lines).map(l => h('p', { class: 'modal-line' }, l)), okText, danger });
 
 function layerForm(init) {
-  const name = h('input', { value: init.name, placeholder: t('例如：动画调试'), maxlength: 20 });
+  const name = h('input', { value: init.name && tn(init.name), placeholder: t('例如：动画调试'), maxlength: 20 });
   const color = h('input', { type: 'color', value: init.color, class: 'color-input' });
   const swatches = h('div', { class: 'swatches' }, ...['#f5c400', '#4f8cff', '#34c77b', '#ff5d5d', '#b07cff', '#ff9f43', '#2ec4d6', '#9aa0a6'].map(c =>
     h('button', { type: 'button', class: 'swatch-btn', style: `background:${c}`, title: c, onclick: () => { color.value = c; } })));
@@ -120,6 +120,8 @@ function describeAction(a) {
 // ───────────── model helpers ─────────────
 const fnById = id => S.cfg.functions.find(f => f.id === id);
 const layerById = id => S.cfg.layers.find(l => l.id === id);
+/** A function's category as shown (grouping and the category filter use the shown text). */
+const catOf = f => tn(f.category) || t('其他');
 const controlById = id => S.cfg.device.controls.find(c => c.id === id);
 const FALLBACK_LABEL = { passthrough: t('原样输出'), block: t('屏蔽') };
 // How the pad is attached (PadTransport on the Hub): cable, 2.4G receiver or Bluetooth.
@@ -189,7 +191,7 @@ function renderLighting() {
   $('#lightPerLayer').checked = !!layer?.lighting;
   $('#lightPanel').dataset.off = cfg.enabled ? '0' : '1';
   $('#lightHint').textContent = !cfg.enabled ? t('未接管：键盘保持它自己的灯效')
-    : layer?.lighting ? t('「{0}」层的灯光，切到该层时自动应用', layer.name)
+    : layer?.lighting ? t('「{0}」层的灯光，切到该层时自动应用', tn(layer.name))
       : t('所有层通用；勾选「本层独立」可为当前层单独设置');
 }
 /** Edit one field of the spec the panel is bound to and preview it on the pad right away. */
@@ -228,7 +230,7 @@ function renderChips() {
     chip(st.hook ? 'ok' : 'err', st.hook ? t('键盘钩子') : t('钩子未安装')),
     chip('', t('拦截: {0}', { correlate: t('关联'), codes: t('按键码'), off: t('关闭') }[st.suppression] || st.suppression || '?')),
     chip('', t('前台: {0}', (fg.process || '?') + (fg.app ? ` → ${fg.app}` : '')), fg.title),
-    chip('', t('当前层: {0}', layer ? layer.name : st.layer || '?')),
+    chip('', t('当前层: {0}', layer ? tn(layer.name) : st.layer || '?')),
     (() => {
       const clients = st.clients || [];
       const tip = clients.length
@@ -256,7 +258,7 @@ async function openLayerProps() {
     h('span', {}, label, hint ? h('span', { class: 'muted small' }, ' — ' + hint) : null));
   const fallbackBox = h('div', {},
     radio('inherit', isBase ? t('按全局设置') : t('继承基础层'),
-      isBase ? t('使用“设备与拦截”里的未绑定设置（当前：{0}）', FALLBACK_LABEL[S.cfg.unbound] || t('原样输出')) : t('沿用「{0}」的绑定', S.cfg.layers[0].name)),
+      isBase ? t('使用“设备与拦截”里的未绑定设置（当前：{0}）', FALLBACK_LABEL[S.cfg.unbound] || t('原样输出')) : t('沿用「{0}」的绑定', tn(S.cfg.layers[0].name))),
     radio('passthrough', t('原样输出'), t('宏键盘原本的按键照常输入')),
     radio('block', t('屏蔽'), t('什么都不发生，适合游戏/演示时防误触')));
 
@@ -264,7 +266,7 @@ async function openLayerProps() {
     const other = app.layer && app.layer !== l.id ? layerById(app.layer) : null;
     return h('label', { class: 'check' },
       h('input', { type: 'checkbox', value: app.id, checked: app.layer === l.id }),
-      h('span', {}, app.name, h('span', { class: 'muted small' }, ` ${app.processes.join(', ')}` + (other ? t('（当前自动切到「{0}」，勾选将改为本层）', other.name) : ''))));
+      h('span', {}, tn(app.name), h('span', { class: 'muted small' }, ` ${app.processes.join(', ')}` + (other ? t('（当前自动切到「{0}」，勾选将改为本层）', tn(other.name)) : ''))));
   });
 
   const act = (label, fn, opts = {}) => h('button', { type: 'button', class: 'ghost small', disabled: opts.disabled, title: opts.title, onclick: () => { document.querySelector('.modal-overlay')?.remove(); fn(); } }, label);
@@ -275,7 +277,7 @@ async function openLayerProps() {
     act(t('复制此层'), () => duplicateLayer(l)));
 
   const ok = await modal({
-    title: t('层属性 · {0}', l.name),
+    title: t('层属性 · {0}', tn(l.name)),
     body: [
       ...f.fields,
       h('div', { class: 'field' }, t('本层未绑定的按键'), fallbackBox),
@@ -304,17 +306,17 @@ function moveLayer(l, delta) {
   S.cfg.layers.splice(from, 1);
   S.cfg.layers.splice(to, 0, l);
   changed();
-  if (to === 0) toast(t('「{0}」已设为基础层，点“保存并应用”生效', l.name));
+  if (to === 0) toast(t('「{0}」已设为基础层，点“保存并应用”生效', tn(l.name)));
 }
 function duplicateLayer(l) {
   let i = 1; while (layerById('layer' + i)) i++;
   const copy = clone(l);
   copy.id = 'layer' + i;
-  copy.name = (l.name + t(' 副本')).slice(0, 20);
+  copy.name = (tn(l.name) + t(' 副本')).slice(0, 20);
   S.cfg.layers.splice(S.cfg.layers.indexOf(l) + 1, 0, copy);
   S.viewLayer = copy.id;
   changed();
-  toast(t('已复制为「{0}」，点“保存并应用”生效', copy.name));
+  toast(t('已复制为「{0}」，点“保存并应用”生效', tn(copy.name)));
 }
 async function deleteViewedLayer() {
   const l = layerById(S.viewLayer);
@@ -325,18 +327,18 @@ async function deleteViewedLayer() {
   const layerFns = S.cfg.functions.filter(f => f.action?.type === 'layer' && f.action.layer === l.id);
   const overrides = S.cfg.apps.flatMap(a => Object.values(a.overrides)).filter(a => a.type === 'layer' && a.layer === l.id);
   const notes = [t('删除后点“保存并应用”才生效，保存前可“撤销修改”。')];
-  if (idx === 0) notes.push(t('· 它是基础层，其他层未绑定的按键会改为继承「{0}」', S.cfg.layers[1].name));
+  if (idx === 0) notes.push(t('· 它是基础层，其他层未绑定的按键会改为继承「{0}」', tn(S.cfg.layers[1].name)));
   if (l.id === S.hub.manualLayer) notes.push(t('· 它是当前激活层，保存后会切到第一个层'));
-  if (apps.length) notes.push(t('· 应用 {0} 将不再自动切层', apps.map(a => a.name).join(t('、'))));
+  if (apps.length) notes.push(t('· 应用 {0} 将不再自动切层', apps.map(a => tn(a.name)).join(t('、'))));
   if (layerFns.length + overrides.length) notes.push(t('· {0} 个“切换到该层”的动作将失效', layerFns.length + overrides.length));
-  if (!await confirmModal(t('删除层「{0}」？', l.name), notes, t('删除'))) return;
+  if (!await confirmModal(t('删除层「{0}」？', tn(l.name)), notes, t('删除'))) return;
 
   S.cfg.layers.splice(idx, 1);
   for (const a of apps) delete a.layer;
   for (const act of [...layerFns.map(f => f.action), ...overrides]) delete act.layer;
   S.viewLayer = S.cfg.layers[Math.max(0, idx - 1)].id;
   changed();
-  toast(t('已删除层「{0}」，点“保存并应用”生效', l.name));
+  toast(t('已删除层「{0}」，点“保存并应用”生效', tn(l.name)));
 }
 function renderLayerTabs() {
   const live = S.hub.layer;
@@ -345,19 +347,28 @@ function renderLayerTabs() {
     h('button', {
       class: 'tab' + (l.id === S.viewLayer ? ' active' : '') + (l.id === live ? ' live' : ''),
       onclick: () => { S.viewLayer = l.id; renderLayerTabs(); renderDevice(); renderInspector(); },
-    }, h('span', { class: 'swatch', style: `background:${l.color}` }), l.name)));
+    }, h('span', { class: 'swatch', style: `background:${l.color}` }), tn(l.name))));
 }
 
 // ───────────── device SVG ─────────────
 const ACCENT_KEYS = new Set(['K1', 'KENTER', 'KMINUS']);
 const GRAY_KEYS = new Set(['K5', 'K6', 'K9', 'K0', 'KDOT']);
+/** Shorten a name to what fits under a key cap: 7 CJK characters or 14 Latin ones. */
+function fitCap(name, width = 14) {
+  let used = 0;
+  for (let i = 0; i < name.length; i++) {
+    used += /[⺀-꓏가-힯豈-﫿＀-￯]/.test(name[i]) ? 2 : 1;
+    if (used > width) return name.slice(0, i) + '…';
+  }
+  return name;
+}
 function shortFnName(controlId) {
   const layer = layerById(S.viewLayer);
   const { fn, inherited, fallback } = resolveFn(layer, controlId);
   if (!fn) return { text: t('未绑定·{0}', FALLBACK_LABEL[fallback] || t('原样输出')), cls: 'fn unbound' };
   const f = fnById(fn);
-  let name = f ? f.name : fn;
-  if (name.length > 7) name = name.slice(0, 7) + '…';
+  let name = f ? tn(f.name) : fn;
+  name = fitCap(name);
   return { text: (inherited ? '↳' : '') + name, cls: 'fn' + (inherited ? ' unbound' : '') };
 }
 function renderDevice() {
@@ -383,10 +394,10 @@ function renderDevice() {
     const fn = shortFnName(c.id);
     const cls = 'k' + (ACCENT_KEYS.has(c.id) ? ' accent' : GRAY_KEYS.has(c.id) ? ' gray' : '') + (S.selected === c.id ? ' selected' : '');
     nodes.push(s('g', { class: cls, 'data-id': c.id, onclick: () => select(c.id) },
-      s('title', {}, `${c.id} · ${c.label}`),
+      s('title', {}, `${c.id} · ${tn(c.label)}`),
       s('rect', { class: 'cap', x: x + 0.04, y: y + 0.04, width: w - 0.08, height: hgt - 0.08, rx: 0.1 }),
       s('rect', { class: 'top', x: x + 0.12, y: y + 0.08, width: w - 0.24, height: hgt - 0.26, rx: 0.08 }),
-      s('text', { x: x + w / 2, y: y + hgt * 0.36 }, c.label),
+      s('text', { x: x + w / 2, y: y + hgt * 0.36 }, tn(c.label)),
       s('text', { x: x + w / 2, y: y + hgt * 0.64, class: fn.cls }, fn.text)));
   }
   for (const g of groups.values()) {
@@ -399,7 +410,7 @@ function renderDevice() {
       const fn = shortFnName(c.id);
       const shaping = describeInput(c, effectiveInput(layerById(S.viewLayer), c).values);
       return s('path', { class: 'part' + (S.selected === c.id ? ' selected' : ''), d, 'data-id': c.id, onclick: ev => { ev.stopPropagation(); select(c.id); } },
-        s('title', {}, `${c.label} · ${fn.text}${shaping ? ' · ' + shaping : ''}`));
+        s('title', {}, `${tn(c.label)} · ${fn.text}${shaping ? ' · ' + shaping : ''}`));
     };
     const ring = r * 0.92, inner = r * 0.38;
     if (g.kind === 'knob') {
@@ -536,7 +547,7 @@ function actionEditor(action, onChange, { allowForward = true } = {}) {
           h('label', { class: 'field' }, t('操作'), h('select', { onchange: e => { set('op', e.target.value); draw(); } },
             ...[['next', t('下一层')], ['prev', t('上一层')], ['set', t('指定层')]].map(([v, n]) => h('option', { value: v, selected: a.op === v }, n)))),
           a.op === 'set' ? h('label', { class: 'field' }, t('层'), h('select', { onchange: e => set('layer', e.target.value) },
-            h('option', { value: '' }, '—'), ...S.cfg.layers.map(l => h('option', { value: l.id, selected: a.layer === l.id }, l.name)))) : null));
+            h('option', { value: '' }, '—'), ...S.cfg.layers.map(l => h('option', { value: l.id, selected: a.layer === l.id }, tn(l.name))))) : null));
         break;
       case 'macro': {
         const list = h('div');
@@ -630,7 +641,7 @@ function inputSection(layer, c) {
     markDirty(); renderDevice(); renderInspector();
   };
   const scopeRow = h('div', { class: 'row', style: 'gap:14px' },
-    ...[['control', t('共用设置（全局一份）')], ['layer', t('「{0}」层单独设置', layer.name)]].map(([val, label]) =>
+    ...[['control', t('共用设置（全局一份）')], ['layer', t('「{0}」层单独设置', tn(layer.name))]].map(([val, label]) =>
       h('label', { class: 'radio', style: 'margin:0' },
         h('input', { type: 'radio', name: 'inputScope', value: val, checked: scope === val, onchange: () => setScope(val) }),
         h('span', {}, label))));
@@ -642,14 +653,14 @@ function inputSection(layer, c) {
   const inherits = S.cfg.layers.filter(l => !(l.input && l.input[c.id]));
   const overview = h('div', { class: 'input-overview' },
     h('div', {}, h('span', { class: 'muted' }, t('共用设置：')), sharedText,
-      h('span', { class: 'muted small' }, t('（{0} 个层使用：{1}）', inherits.length, inherits.map(l => l.name).join(t('、')) || t('无')))),
+      h('span', { class: 'muted small' }, t('（{0} 个层使用：{1}）', inherits.length, inherits.map(l => tn(l.name)).join(t('、')) || t('无')))),
     overrides.length ? h('div', {}, h('span', { class: 'muted' }, t('单独设置的层：')),
-      ...overrides.map((l, i) => h('span', {}, i ? '、' : '',
-        h('a', { href: '#', onclick: e => { e.preventDefault(); S.viewLayer = l.id; renderLayerTabs(); renderDevice(); renderInspector(); } }, l.name),
+      ...overrides.map((l, i) => h('span', {}, i ? t('、') : '',
+        h('a', { href: '#', onclick: e => { e.preventDefault(); S.viewLayer = l.id; renderLayerTabs(); renderDevice(); renderInspector(); } }, tn(l.name)),
         `（${describeInput(c, { ...INPUT_DEFAULTS, ...l.input[c.id] }) || defaultText}）`))) : null,
     h('div', { class: 'muted small' }, scope === 'control'
       ? t('修改共用设置会影响上面所有使用它的层；单独设置的层不受影响。')
-      : t('只影响「{0}」层，优先于共用设置。', layer.name)));
+      : t('只影响「{0}」层，优先于共用设置。', tn(layer.name))));
 
   const fields = [];
   if (isRotary(c)) {
@@ -671,7 +682,7 @@ function inputSection(layer, c) {
     fields.push(num('minIntervalMs', t('最小触发间隔'), 0, 5000, 10, 'ms', t('0 为不限制；防止连续快速按下重复触发')));
   }
 
-  const source = { layer: t('「{0}」层单独设置', layer.name), control: t('共用设置'), default: t('默认值') }[eff.scope];
+  const source = { layer: t('「{0}」层单独设置', tn(layer.name)), control: t('共用设置'), default: t('默认值') }[eff.scope];
   return h('div', { class: 'section' },
     h('div', { class: 'row between' }, h('b', {}, isRotary(c) ? t('旋转灵敏度') : t('按键触发')),
       h('span', { class: 'muted small' }, t('本层生效：{0}', source))),
@@ -697,12 +708,12 @@ function renderInspector() {
   const sigs = h('div', { class: 'sigs' }, ...(c.signatures.length ? c.signatures.map(sig => h('span', { class: 'sig ' + sig.split(':')[0], title: sigTitle(sig) }, sig)) : [h('span', { class: 'muted small' }, t('无签名（尚未学习）'))]));
   const learning = S.hub.learning === c.id;
   const learnBox = learning
-    ? h('div', { class: 'learn-box' }, t('请在宏键盘上按一下 '), h('b', {}, c.label), t('（旋钮/摇杆请做对应动作）…'), h('button', { class: 'ghost small', style: 'margin-left:8px', onclick: () => api('DELETE', '/learn') }, t('取消')))
+    ? h('div', { class: 'learn-box' }, t('请在宏键盘上按一下 '), h('b', {}, tn(c.label)), t('（旋钮/摇杆请做对应动作）…'), h('button', { class: 'ghost small', style: 'margin-left:8px', onclick: () => api('DELETE', '/learn') }, t('取消')))
     : null;
 
   // binding select
   const cats = {};
-  for (const f of S.cfg.functions) (cats[f.category || t('其他')] ||= []).push(f);
+  for (const f of S.cfg.functions) (cats[catOf(f)] ||= []).push(f);
   const bindSel = h('select', {
     onchange: e => {
       const v = e.target.value;
@@ -715,18 +726,18 @@ function renderInspector() {
     h('option', { value: '' }, layer.fallback && layer.fallback !== 'inherit'
       ? t('（未绑定：{0}）', FALLBACK_LABEL[layer.fallback])
       : S.cfg.layers[0] === layer ? t('（未绑定：{0}）', FALLBACK_LABEL[S.cfg.unbound] || t('原样输出')) : t('（继承基础层）')),
-    ...Object.entries(cats).map(([cat, fns]) => h('optgroup', { label: cat }, ...fns.map(f => h('option', { value: f.id, selected: layer.map[c.id] === f.id }, `${f.name}  ·  ${describeAction(f.action)}`)))),
+    ...Object.entries(cats).map(([cat, fns]) => h('optgroup', { label: cat }, ...fns.map(f => h('option', { value: f.id, selected: layer.map[c.id] === f.id }, `${tn(f.name)}  ·  ${describeAction(f.action)}`)))),
     h('option', { value: '__new' }, t('+ 新建功能…')));
 
   const parts = [
-    h('p', { class: 'insp-title' }, c.label),
+    h('p', { class: 'insp-title' }, tn(c.label)),
     h('div', { class: 'insp-sub' }, t('控件 {0}', c.id) + (c.part ? ` · ${c.kind}/${c.part}` : '')),
     h('div', { class: 'row between' }, h('b', {}, t('硬件签名')), h('button', { class: 'ghost small', disabled: !S.hub.connected && S.hub.suppression !== 'codes', onclick: () => api('POST', '/learn/' + encodeURIComponent(c.id)).catch(e => toast(e.message, true)) }, t('学习'))),
     sigs, learnBox,
     h('div', { class: 'section' },
-      h('div', { class: 'row between' }, h('b', {}, t('在「'), h('span', { style: `color:${layer.color}` }, layer.name), t('」层绑定的功能'))),
+      h('div', { class: 'row between' }, h('b', {}, t('在「'), h('span', { style: `color:${layer.color}` }, tn(layer.name)), t('」层绑定的功能'))),
       bindSel,
-      inherited ? h('p', { class: 'muted small' }, t('当前继承自基础层「{0}」', S.cfg.layers[0].name))
+      inherited ? h('p', { class: 'muted small' }, t('当前继承自基础层「{0}」', tn(S.cfg.layers[0].name)))
         : !fnId ? h('p', { class: 'muted small' }, t('本层未绑定时：{0}（可在“层属性”中修改）', FALLBACK_LABEL[resolveFn(layer, c.id).fallback] || t('原样输出'))) : null,
       h('div', { class: 'row' },
         h('button', { class: 'ghost small', onclick: () => simulate(c.id) }, t('模拟按下（使用已保存配置）')))),
@@ -736,10 +747,10 @@ function renderInspector() {
   if (fn) {
     const usage = fnUsage(fn.id);
     parts.push(h('div', { class: 'section' },
-      h('div', { class: 'row between' }, h('b', {}, t('功能：{0}', fn.name)), h('span', { class: 'muted small' }, t('id {0} · 被 {1} 处使用', fn.id, usage))),
+      h('div', { class: 'row between' }, h('b', {}, t('功能：{0}', tn(fn.name))), h('span', { class: 'muted small' }, t('id {0} · 被 {1} 处使用', fn.id, usage))),
       h('div', { class: 'grid2', style: 'gap:8px' },
-        h('label', { class: 'field' }, t('名称'), h('input', { value: fn.name, oninput: e => { fn.name = e.target.value; markDirty(); renderDevice(); } })),
-        h('label', { class: 'field' }, t('分类'), h('input', { value: fn.category, oninput: e => { fn.category = e.target.value; markDirty(); } }))),
+        h('label', { class: 'field' }, t('名称'), h('input', { value: tn(fn.name), oninput: e => { fn.name = e.target.value; markDirty(); renderDevice(); } })),
+        h('label', { class: 'field' }, t('分类'), h('input', { value: tn(fn.category), oninput: e => { fn.category = e.target.value; markDirty(); } }))),
       h('b', { class: 'small' }, t('默认动作（系统层）')),
       actionEditor(fn.action, () => { markDirty(); })));
 
@@ -754,7 +765,7 @@ function renderInspector() {
               if (e.target.checked) app.overrides[fn.id] = clone(fn.action); else delete app.overrides[fn.id];
               changed();
             },
-          }), h('b', {}, app.name)),
+          }), h('b', {}, tn(app.name))),
           h('span', { class: 'muted small' }, app.processes.join(', '))),
         ov ? actionEditor(ov, () => markDirty()) : null));
     }
@@ -787,18 +798,18 @@ async function simulate(controlId) {
 function renderApps() {
   const list = $('#appList');
   list.replaceChildren(...S.cfg.apps.map((app, idx) => h('div', { class: 'card' },
-    h('div', { class: 'card-head' }, h('b', {}, app.name || app.id),
-      h('button', { class: 'danger small', onclick: async () => { if (await confirmModal(t('删除应用档案「{0}」？', app.name), t('删除后点“保存并应用”才生效。'), t('删除'))) { S.cfg.apps.splice(S.cfg.apps.indexOf(app), 1); changed(); } } }, t('删除'))),
+    h('div', { class: 'card-head' }, h('b', {}, tn(app.name) || app.id),
+      h('button', { class: 'danger small', onclick: async () => { if (await confirmModal(t('删除应用档案「{0}」？', tn(app.name)), t('删除后点“保存并应用”才生效。'), t('删除'))) { S.cfg.apps.splice(S.cfg.apps.indexOf(app), 1); changed(); } } }, t('删除'))),
     h('div', { class: 'grid3' },
-      h('label', { class: 'field' }, t('名称'), h('input', { value: app.name, oninput: e => { app.name = e.target.value; markDirty(); } })),
+      h('label', { class: 'field' }, t('名称'), h('input', { value: tn(app.name), oninput: e => { app.name = e.target.value; markDirty(); } })),
       h('label', { class: 'field' }, t('进程（逗号分隔，支持 *）'), h('input', { value: app.processes.join(', '), oninput: e => { app.processes = e.target.value.split(',').map(x => x.trim()).filter(Boolean); markDirty(); } })),
       h('label', { class: 'field' }, t('前台时自动切换到层'), h('select', { onchange: e => { app.layer = e.target.value || undefined; changed(); } },
-        h('option', { value: '' }, t('（不切换）')), ...S.cfg.layers.map(l => h('option', { value: l.id, selected: app.layer === l.id }, l.name))))),
+        h('option', { value: '' }, t('（不切换）')), ...S.cfg.layers.map(l => h('option', { value: l.id, selected: app.layer === l.id }, tn(l.name)))))),
     h('label', { class: 'field' }, t('转发给应用客户端'),
       h('select', { onchange: e => { app.forward = e.target.value; delete app.forwardAll; changed(); } },
         ...Object.entries(FORWARD_MODES).map(([v, m]) => h('option', { value: v, selected: (app.forward || 'off') === v }, m.label)))),
     h('p', { class: 'muted small', style: 'margin-top:-4px' }, FORWARD_MODES[app.forward || 'off'].hint),
-    h('div', { class: 'muted small' }, t('覆盖 {0} 个功能：', Object.keys(app.overrides).length) + Object.entries(app.overrides).map(([k, v]) => `${fnById(k)?.name || k} → ${describeAction(v)}`).join(t('；'))))));
+    h('div', { class: 'muted small' }, t('覆盖 {0} 个功能：', Object.keys(app.overrides).length) + Object.entries(app.overrides).map(([k, v]) => `${tn(fnById(k)?.name) || k} → ${describeAction(v)}`).join(t('；'))))));
 }
 // Every place a function is bound: layer + control, plus app overrides.
 function fnUsages(fnId) {
@@ -818,10 +829,10 @@ function renderFunctions() {
   const f0 = S.fnFilter ||= { q: '', category: '', usage: '' };
   // category options (kept in sync with the functions list)
   const catCounts = {};
-  for (const f of S.cfg.functions) catCounts[f.category || t('其他')] = (catCounts[f.category || t('其他')] || 0) + 1;
+  for (const f of S.cfg.functions) catCounts[catOf(f)] = (catCounts[catOf(f)] || 0) + 1;
   const catSel = $('#fnCategory');
   catSel.replaceChildren(h('option', { value: '' }, t('全部分类（{0}）', S.cfg.functions.length)),
-    ...Object.entries(catCounts).map(([c, n]) => h('option', { value: c, selected: f0.category === c }, `${c}（${n}）`)));
+    ...Object.entries(catCounts).map(([c, n]) => h('option', { value: c, selected: f0.category === c }, t('{0}（{1}）', c, n))));
   if (f0.category && !catCounts[f0.category]) f0.category = '';
   catSel.value = f0.category;
   $('#fnUsage').value = f0.usage;
@@ -831,21 +842,21 @@ function renderFunctions() {
   const overridden = id => S.cfg.apps.filter(a => a.overrides && a.overrides[id]);
   const matches = f => {
     const usages = fnUsages(f.id);
-    if (f0.category && (f.category || t('其他')) !== f0.category) return false;
+    if (f0.category && (catOf(f)) !== f0.category) return false;
     if (f0.usage === 'used' && !usages.length) return false;
     if (f0.usage === 'unused' && usages.length) return false;
     if (f0.usage === 'override' && !overridden(f.id).length) return false;
     if (!terms.length) return true;
-    const hay = [f.id, f.name, f.category, describeAction(f.action), f.action?.keys, f.action?.text, f.action?.path,
-      ...usages.map(u => `${u.layer.name} ${u.control.label} ${u.control.id}`),
-      ...overridden(f.id).map(a => `${a.name} ${describeAction(a.overrides[f.id])}`)].join(' ').toLowerCase();
+    const hay = [f.id, tn(f.name), tn(f.category), describeAction(f.action), f.action?.keys, f.action?.text, f.action?.path,
+      ...usages.map(u => `${tn(u.layer.name)} ${tn(u.control.label)} ${u.control.id}`),
+      ...overridden(f.id).map(a => `${tn(a.name)} ${describeAction(a.overrides[f.id])}`)].join(' ').toLowerCase();
     return terms.every(t => hay.includes(t));
   };
 
   const rows = [h('tr', {}, h('th', {}, 'ID'), h('th', {}, t('名称')), h('th', {}, t('默认动作')), h('th', {}, t('使用位置')), h('th', {}))];
   const cats = {};
   let shown = 0;
-  for (const f of S.cfg.functions) if (matches(f)) (cats[f.category || t('其他')] ||= []).push(f);
+  for (const f of S.cfg.functions) if (matches(f)) (cats[catOf(f)] ||= []).push(f);
   for (const [cat, fns] of Object.entries(cats)) {
     rows.push(h('tr', { class: 'cat' }, h('td', { colspan: 5 }, highlight(cat, terms), h('span', { class: 'muted small' }, `  ${fns.length}`))));
     for (const f of fns) {
@@ -855,13 +866,13 @@ function renderFunctions() {
       const apps = overridden(f.id);
       const usageCell = h('td', { class: 'usages' },
         used ? usages.map(u => h('a', {
-          href: '#', class: 'usage-chip', title: t('跳到「{0}」层的 {1}', u.layer.name, u.control.label),
+          href: '#', class: 'usage-chip', title: t('跳到「{0}」层的 {1}', tn(u.layer.name), tn(u.control.label)),
           onclick: e => { e.preventDefault(); S.viewLayer = u.layer.id; renderLayerTabs(); select(u.control.id); window.scrollTo({ top: 0, behavior: 'smooth' }); },
-        }, h('span', { class: 'swatch', style: `background:${u.layer.color}` }), highlight(`${u.layer.name}·${u.control.label}`, terms)))
+        }, h('span', { class: 'swatch', style: `background:${u.layer.color}` }), highlight(`${tn(u.layer.name)}·${tn(u.control.label)}`, terms)))
           : h('span', { class: 'muted small' }, t('未使用')),
-        apps.length ? h('div', { class: 'muted small' }, t('覆盖：'), highlight(apps.map(a => a.name).join('、'), terms)) : null);
+        apps.length ? h('div', { class: 'muted small' }, t('覆盖：'), highlight(apps.map(a => tn(a.name)).join(t("、")), terms)) : null);
       rows.push(h('tr', { 'data-fn': f.id },
-        h('td', { class: 'mono' }, highlight(f.id, terms)), h('td', {}, highlight(f.name, terms)), h('td', { class: 'mono' }, highlight(describeAction(f.action), terms)), usageCell,
+        h('td', { class: 'mono' }, highlight(f.id, terms)), h('td', {}, highlight(tn(f.name), terms)), h('td', { class: 'mono' }, highlight(describeAction(f.action), terms)), usageCell,
         h('td', { class: 'actions' },
           h('button', { class: 'ghost small', onclick: () => api('POST', '/execute', { action: f.action }).then(() => toast(t('已执行 {0}', describeAction(f.action)))).catch(e => toast(e.message, true)) }, t('执行')),
           ' ',
@@ -1009,7 +1020,7 @@ function wire() {
     const f = layerForm({ name: t('自定义层'), color: '#b07cff' });
     const source = h('select', {},
       h('option', { value: '' }, t('空白（未绑定的按键继承基础层）')),
-      ...S.cfg.layers.map(l => h('option', { value: l.id }, t('复制「{0}」的绑定', l.name))));
+      ...S.cfg.layers.map(l => h('option', { value: l.id }, t('复制「{0}」的绑定', tn(l.name)))));
     const ok = await modal({
       title: t('新建层'),
       body: [...f.fields, h('label', { class: 'field' }, t('初始绑定'), source),
@@ -1039,7 +1050,7 @@ function wire() {
     const row = document.querySelector(`#fnTable tr[data-fn="${f.id}"]`);
     row?.scrollIntoView({ block: 'center' });
     row?.classList.add('flash');
-    toast(t('已新建「{0}」，在按键检查器里绑定并编辑它', f.name));
+    toast(t('已新建「{0}」，在按键检查器里绑定并编辑它', tn(f.name)));
   });
   $('#fnSearch').addEventListener('input', e => { S.fnFilter.q = e.target.value; renderFunctions(); });
   $('#fnSearch').addEventListener('keydown', e => { if (e.key === 'Escape') { S.fnFilter.q = ''; renderFunctions(); } });
@@ -1113,7 +1124,7 @@ function wire() {
   });
   $('#btnReset').addEventListener('click', async () => {
     if (!await confirmModal(t('恢复默认配置？'), t('会覆盖当前已保存的配置（包括学习到的按键签名），且无法撤销。'), t('恢复默认'))) return;
-    await api('POST', '/config/reset');
+    await api('POST', '/config/reset?lang=' + I18N.lang);
     await loadConfig(); toast(t('已恢复默认配置'));
   });
 }
@@ -1134,6 +1145,7 @@ async function init() {
   $('#btnLang').textContent = I18N.lang === 'zh' ? 'EN' : '中文';
   $('#btnLang').addEventListener('click', () => I18N.setLang(I18N.lang === 'zh' ? 'en' : 'zh'));
   wire();
+  I18N.setDefaultNames(await api('GET', '/names'));
   S.keyNames = await api('GET', '/keys');
   document.body.append(h('datalist', { id: 'keyNames' }, ...S.keyNames.map(k => h('option', { value: k }))));
   await loadConfig();

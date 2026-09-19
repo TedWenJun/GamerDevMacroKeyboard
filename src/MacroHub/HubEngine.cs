@@ -254,14 +254,19 @@ public sealed class HubEngine : IDisposable
         return c;
     }
 
-    public static HubConfig LoadDefaults() => HubConfig.Load(DefaultsPath());
+    /// <summary>Default configuration in <paramref name="lang"/> ("zh" / "en"), or the Windows display language.</summary>
+    public static HubConfig LoadDefaults(string? lang = null) => HubConfig.Load(DefaultsPath(lang));
+
+    /// <summary>(Chinese, English) display-name pairs of the two default configurations, for the web UI.</summary>
+    public static List<(string Zh, string En)> DefaultNamePairs() => DefaultNames.Pairs(
+        JsonNode.Parse(File.ReadAllText(DefaultsPath("zh"))), JsonNode.Parse(File.ReadAllText(DefaultsPath("en"))));
 
     /// <summary>
-    /// Default configuration in the Windows display language: hub.json (Chinese) or hub.en.json (English). The two differ
-    /// only in display names; a unit test keeps their structure identical.
+    /// Default configuration file: hub.json (Chinese) or hub.en.json (English), by <paramref name="lang"/> or else the
+    /// Windows display language. The two differ only in display names; a unit test keeps their structure identical.
     /// </summary>
-    private static string DefaultsPath() => Path.Combine(AppContext.BaseDirectory, "defaults",
-        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "zh" ? "hub.json" : "hub.en.json");
+    private static string DefaultsPath(string? lang = null) => Path.Combine(AppContext.BaseDirectory, "defaults",
+        (lang ?? CultureInfo.CurrentUICulture.TwoLetterISOLanguageName) == "zh" ? "hub.json" : "hub.en.json");
 
     public List<string> ApplyConfig(HubConfig config, bool save = true)
     {

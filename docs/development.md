@@ -123,7 +123,7 @@ Saving validates the whole configuration (`HubConfig.Validate`); old fields migr
 |---|---|---|
 | GET | `/api/state` | Device, connection (`transport`), battery (`battery`), hook, foreground, layer, clients, interception statistics |
 | GET / PUT | `/api/config` | Read / save and apply live (validation failures return 400 + `errors`) |
-| POST | `/api/config/validate` · `/api/config/reset` | Validate / restore defaults |
+| POST | `/api/config/validate` · `/api/config/reset[?lang=zh\|en]` | Validate / restore defaults (in that language; default: Windows display language) |
 | POST | `/api/simulate` | `{control, phase, tap}` simulate a control (full routing and execution) |
 | POST | `/api/execute` | `{action}` run an action directly |
 | POST | `/api/layer` | `{op:"next"|"prev"|"set", layer}` |
@@ -133,6 +133,7 @@ Saving validates the whole configuration (`HubConfig.Validate`); old fields migr
 | POST | `/api/tuning` | `{correlateWaitMs}` how long the hook waits for the physical report |
 | DELETE | `/api/stats` | Reset interception statistics |
 | GET | `/api/keys` · `/api/devices` | Key names / HID devices on this PC |
+| GET | `/api/names` | `[Chinese, English]` pairs of the default display names, so the UI can show untouched defaults in its language |
 | GET / POST | `/api/diag/volume` · `/api/diag/volume/arm` | Knob volume guard status / arm a guard window manually (tests) |
 | POST | `/api/diag/foreground` | Pin the routing foreground `{pid, process}`, empty object to release; `--test-mode` only |
 

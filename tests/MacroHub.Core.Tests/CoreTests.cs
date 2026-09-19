@@ -114,6 +114,18 @@ public class ConfigAndRouterTests
     }
 
     [Fact]
+    public void DefaultNamesPairBothLanguages()
+    {
+        var pairs = DefaultNames.Pairs(
+            JsonNode.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "hub.json"))),
+            JsonNode.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "hub.en.json"))));
+        Assert.Contains(("原样输出", "Pass through"), pairs);
+        Assert.Contains(("旋钮 左旋", "Knob left"), pairs);
+        Assert.Contains(("系统", "System"), pairs);
+        Assert.Equal(pairs.Count, pairs.Select(p => p.Zh).Distinct().Count());
+    }
+
+    [Fact]
     public void DefaultConfigIsValid()
     {
         var c = Defaults();

@@ -17,7 +17,7 @@ const I18N = (() => {
     '确定': 'OK', '取消': 'Cancel', '删除': 'Delete', '创建': 'Create', '添加': 'Add', '执行': 'Run', '学习': 'Learn',
     '名称': 'Name', '分类': 'Category', '颜色': 'Colour', '类型': 'Type', '参数': 'Arguments', '操作': 'Operation',
     '层': 'Layer', '激活': 'active', '无': 'none', '暂无': 'None yet', '未知': 'unknown', '其他': 'Other', '自定义': 'Custom',
-    '、': ', ', '，': ', ', '；': '; ', ' 副本': ' copy',
+    '、': ', ', '，': ', ', '；': '; ', ' 副本': ' copy', '{0}（{1}）': '{0} ({1})',
 
     // ── top bar ──
     'MacroHub · 宏键盘配置': 'MacroHub · Macro pad setup', '宏键盘系统层': 'macro pad system layer',
@@ -71,7 +71,7 @@ const I18N = (() => {
 
     // ── lighting ──
     '灯光': 'Lighting', '接管': 'Take over', '打开后 MacroHub 才会写入键盘背光': 'MacroHub only writes the backlight while this is on',
-    '模式': 'Mode', '亮度': 'Brightness', '色彩': 'Colour', '速度': 'Speed', '方向': 'Direction', '顺': 'CW', '逆': 'CCW',
+    '模式': 'Mode', '亮度': 'Brightness', '色彩': 'Colour', '速度': 'Speed', '方向': 'Direction', '顺时针': 'Clockwise', '逆时针': 'Counter-clockwise',
     '本层独立': 'Per layer', '勾选后这个层有自己的灯光，切到该层时自动应用': 'Gives this layer its own lighting, applied whenever it becomes active',
     '单色常亮': 'Solid', '行云流水': 'Flowing', '跑马': 'Marquee', '单色呼吸': 'Breathing', '循环呼吸': 'Cycling breath',
     '俄罗斯方块': 'Tetris', '霓虹': 'Neon', '流光溢彩': 'Rainbow flow', '关灯': 'Off',
@@ -248,12 +248,28 @@ const I18N = (() => {
     if (EN[document.title] !== undefined) document.title = EN[document.title];
   }
 
+  // Names that come from the configuration (layers, functions, categories, control labels, apps). The config keeps
+  // whatever language it was created in; a name still equal to a default in either language is shown in the current
+  // one, anything the user typed is shown as typed. Pairs come from /api/names ([Chinese, English] per default name).
+  const names = new Map();
+  function setDefaultNames(pairs) {
+    names.clear();
+    for (const [zh, en] of pairs || []) {
+      names.set(zh, lang === 'en' ? en : zh);
+      names.set(en, lang === 'en' ? en : zh);
+    }
+  }
+  /** Show a configuration name in the current language when it is an untouched default. */
+  function tn(name) {
+    return typeof name === 'string' ? names.get(name) ?? name : name;
+  }
+
   function setLang(next) {
     try { localStorage.setItem(STORAGE_KEY, next); } catch { /* not persisted; still switch for this load */ }
     location.reload();
   }
 
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-  return { lang, t, translateDom, setLang, EN };
+  return { lang, t, tn, setDefaultNames, translateDom, setLang, EN };
 })();
-const t = I18N.t;
+const t = I18N.t, tn = I18N.tn;

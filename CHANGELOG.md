@@ -8,6 +8,13 @@ versions follow [Semantic Versioning](https://semver.org/). Item-by-item notes f
 
 ## [Unreleased]
 
+### Fixed
+- English web UI: default layer, function, category and control names (the function names on the key caps too) were still shown in Chinese; any name that is still a default now follows the interface language (`GET /api/names`). English names on the caps are shortened by width.
+
+### Changed
+- Lighting direction buttons show ↻ / ↺ instead of CW / CCW (the name is in the tooltip).
+- `POST /api/config/reset?lang=zh|en` restores the defaults in that language; the web UI passes its own.
+
 ## [0.2.0] - 2026-09-20
 
 ### Added

@@ -114,7 +114,7 @@ dotnet build src\MacroHub -c Debug; dotnet build tools\KeyTarget -c Debug; node 
 |---|---|---|
 | GET | `/api/state` | 设备、连接方式（`transport`）、电量（`battery`）、钩子、前台、层、客户端、拦截统计 |
 | GET / PUT | `/api/config` | 读取 / 保存并热应用（校验失败返回 400 + `errors`） |
-| POST | `/api/config/validate` · `/api/config/reset` | 校验 / 恢复默认 |
+| POST | `/api/config/validate` · `/api/config/reset[?lang=zh\|en]` | 校验 / 恢复默认（按指定语言，缺省跟随 Windows 显示语言） |
 | POST | `/api/simulate` | `{control, phase, tap}` 模拟控件（走完整路由与执行） |
 | POST | `/api/execute` | `{action}` 直接执行动作 |
 | POST | `/api/layer` | `{op:"next"|"prev"|"set", layer}` |
@@ -124,6 +124,7 @@ dotnet build src\MacroHub -c Debug; dotnet build tools\KeyTarget -c Debug; node 
 | POST | `/api/tuning` | `{correlateWaitMs}` 钩子等待物理报告的时间 |
 | DELETE | `/api/stats` | 清零拦截统计 |
 | GET | `/api/keys` · `/api/devices` | 可用键名 / 本机 HID 设备 |
+| GET | `/api/names` | 默认显示名称的 `[中文, 英文]` 对照，界面据此把未改动的默认名称显示为当前语言 |
 | GET / POST | `/api/diag/volume` · `/api/diag/volume/arm` | 旋钮音量保护状态 / 手动触发保护窗口（测试用） |
 | POST | `/api/diag/foreground` | 固定路由用的前台应用 `{pid, process}`，空对象取消；仅 `--test-mode` 启用 |
 

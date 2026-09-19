@@ -113,11 +113,13 @@ api.MapPost("/config/validate", async (HttpRequest req) =>
     }
     catch (JsonException e) { return Results.Ok(new { errors = new[] { e.Message } }); }
 });
-api.MapPost("/config/reset", () =>
+api.MapPost("/config/reset", (string? lang) =>
 {
-    var errors = engine.ApplyConfig(HubEngine.LoadDefaults());
+    var errors = engine.ApplyConfig(HubEngine.LoadDefaults(lang is "zh" or "en" ? lang : null));
     return errors.Count == 0 ? Results.Ok(new { ok = true }) : Results.BadRequest(new { errors });
 });
+var defaultNames = HubEngine.DefaultNamePairs().Select(p => new[] { p.Zh, p.En }).ToList();
+api.MapGet("/names", () => defaultNames);
 api.MapGet("/keys", () => VirtualKeys.AllNames);
 api.MapGet("/devices", () => PadHidReader.Find([""]).GroupBy(c => c.Path.Split('#').ElementAtOrDefault(1) ?? c.Path)
     .Select(g => new { id = g.Key, collections = g.Select(c => new { c.UsagePage, c.Usage, c.InputLength }) }));
