@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!-- Windows 11 system-layer daemon: HID reading, keyboard hook, action execution, web UI, app client channels. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <!-- Background app: no console window (logs go to %LOCALAPPDATA%\MacroHub\logs; stdout still works when redirected) -->
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>MacroHub</AssemblyName>
+    <RootNamespace>MacroHub</RootNamespace>
+    <ApplicationIcon Condition="Exists('app.ico')">app.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- CS8500: pointers to managed structs in Win32 interop are intentional -->
+    <NoWarn>$(NoWarn);CS8500</NoWarn>
+    <RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
+    <!-- wwwroot is served from disk next to the exe (UseStaticFiles); no IIS, no static-web-asset manifest or
+         pre-compressed copies in the package -->
+    <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
+    <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+    <!-- Only for the notification-area icon (Hosting/TrayIcon.cs). -->
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- WinForms is used by the tray icon alone; keep its names (Timer, Application, Control...) out of every file. -->
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MacroHub.Core\MacroHub.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="defaults\hub.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="defaults\hub.en.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Update="wwwroot\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

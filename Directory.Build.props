@@ -1,0 +1,17 @@
+<Project>
+  <!-- Shared by every project in the repository (src, tests, tools). -->
+  <PropertyGroup>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <Product>MacroHub</Product>
+    <Company>MacroHub contributors</Company>
+    <Copyright>© MacroHub contributors</Copyright>
+
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Deterministic>true</Deterministic>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <!-- CI builds fail on warnings; local builds only report them. -->
+    <TreatWarningsAsErrors Condition="'$(CI)' == 'true'">true</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>

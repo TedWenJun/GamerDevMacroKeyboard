@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "unbound": "passthrough",
+  "device": {
+    "name": "SXS-W909 (YXT K100 firmware)",
+    "match": [ "VID_B6A4&PID_4100", "VID_B6A4&PID_4101", "VID&0002B6A4", "VID&02B6A4" ],
+    "vendorReportId": 5,
+    "controls": [
+      { "id": "KNOB_CCW", "label": "Knob left", "kind": "knob", "part": "ccw", "rect": [0, 0, 1.2, 1.2], "signatures": [ "consumer:0EA", "key:AE" ] },
+      { "id": "KNOB_CW", "label": "Knob right", "kind": "knob", "part": "cw", "rect": [0, 0, 1.2, 1.2], "signatures": [ "consumer:0E9", "key:AF" ] },
+      { "id": "KNOB_PRESS", "label": "Knob press", "kind": "knob", "part": "press", "rect": [0, 0, 1.2, 1.2], "signatures": [ "vendor:42" ] },
+      { "id": "K1", "label": "1", "rect": [1.4, 0.1, 1, 1], "signatures": [ "vendor:48", "key:61" ] },
+      { "id": "K2", "label": "2", "rect": [2.4, 0.1, 1, 1], "signatures": [ "vendor:40", "key:62" ] },
+      { "id": "K3", "label": "3", "rect": [3.4, 0.1, 1, 1], "signatures": [ "vendor:32", "key:63" ] },
+      { "id": "K4", "label": "4", "rect": [4.4, 0.1, 1, 1], "signatures": [ "vendor:24", "key:64" ] },
+      { "id": "K5", "label": "5", "rect": [5.4, 0.1, 1, 1], "signatures": [ "vendor:16", "key:65" ] },
+      { "id": "K6", "label": "6", "rect": [6.4, 0.1, 1, 1], "signatures": [ "vendor:8", "key:66" ] },
+      { "id": "K7", "label": "7", "rect": [0.3, 1.4, 1, 1], "signatures": [ "vendor:49", "key:67" ] },
+      { "id": "K8", "label": "8", "rect": [1.3, 1.4, 1, 1], "signatures": [ "vendor:41", "key:68" ] },
+      { "id": "K9", "label": "9", "rect": [2.3, 1.4, 1, 1], "signatures": [ "vendor:33", "key:69" ] },
+      { "id": "K0", "label": "0", "rect": [3.3, 1.4, 1, 1], "signatures": [ "vendor:25", "key:60" ] },
+      { "id": "KDOT", "label": ".", "rect": [4.3, 1.4, 1, 1], "signatures": [ "vendor:17", "key:6E" ] },
+      { "id": "KENTER", "label": "ENTER", "rect": [5.3, 1.4, 2.1, 1], "signatures": [ "vendor:9", "key:0D" ] },
+      { "id": "KMINUS", "label": "−", "rect": [0.3, 2.7, 1.25, 1], "signatures": [ "vendor:18", "key:6D" ] },
+      { "id": "KPLUS", "label": "+", "rect": [1.55, 2.7, 1, 1], "signatures": [ "vendor:26", "key:6B" ] },
+      { "id": "KSPACE", "label": "SPACE", "rect": [2.55, 2.7, 2.9, 1], "signatures": [ "vendor:34", "key:20" ] },
+      { "id": "JOY_UP", "label": "Joystick up", "kind": "joystick", "part": "up", "rect": [5.9, 2.5, 1.4, 1.4], "signatures": [ "vendor:82", "key:26" ] },
+      { "id": "JOY_DOWN", "label": "Joystick down", "kind": "joystick", "part": "down", "rect": [5.9, 2.5, 1.4, 1.4], "signatures": [ "vendor:74", "key:28" ] },
+      { "id": "JOY_LEFT", "label": "Joystick left", "kind": "joystick", "part": "left", "rect": [5.9, 2.5, 1.4, 1.4], "signatures": [ "vendor:58", "key:25" ] },
+      { "id": "JOY_RIGHT", "label": "Joystick right", "kind": "joystick", "part": "right", "rect": [5.9, 2.5, 1.4, 1.4], "signatures": [ "vendor:66", "key:27" ] },
+      { "id": "JOY_PRESS", "label": "Joystick press", "kind": "joystick", "part": "press", "rect": [5.9, 2.5, 1.4, 1.4], "signatures": [ "vendor:50", "key:0D" ] }
+    ]
+  },
+  "functions": [
+    { "id": "pass", "name": "Pass through", "category": "System", "action": { "type": "passthrough" } },
+    { "id": "block", "name": "Block", "category": "System", "action": { "type": "none" } },
+    { "id": "layer.next", "name": "Next layer", "category": "System", "action": { "type": "layer", "op": "next" } },
+    { "id": "layer.prev", "name": "Previous layer", "category": "System", "action": { "type": "layer", "op": "prev" } },
+
+    { "id": "edit.copy", "name": "Copy", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+C" } },
+    { "id": "edit.paste", "name": "Paste", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+V" } },
+    { "id": "edit.cut", "name": "Cut", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+X" } },
+    { "id": "edit.undo", "name": "Undo", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+Z" } },
+    { "id": "edit.redo", "name": "Redo", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+Y" } },
+    { "id": "edit.save", "name": "Save", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+S" } },
+    { "id": "edit.saveAll", "name": "Save all", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+Shift+S" } },
+    { "id": "edit.find", "name": "Find", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+F" } },
+    { "id": "edit.selectAll", "name": "Select all", "category": "Edit", "action": { "type": "keys", "keys": "Ctrl+A" } },
+    { "id": "edit.delete", "name": "Delete", "category": "Edit", "action": { "type": "keys", "keys": "Delete" } },
+
+    { "id": "win.desktop", "name": "Show desktop", "category": "Windows", "action": { "type": "keys", "keys": "Win+D" } },
+    { "id": "win.taskView", "name": "Task view", "category": "Windows", "action": { "type": "keys", "keys": "Win+Tab" } },
+    { "id": "win.snip", "name": "Screenshot", "category": "Windows", "action": { "type": "keys", "keys": "Win+Shift+S" } },
+    { "id": "win.explorer", "name": "File Explorer", "category": "Windows", "action": { "type": "keys", "keys": "Win+E" } },
+    { "id": "win.calc", "name": "Calculator", "category": "Windows", "action": { "type": "run", "path": "calc.exe" } },
+
+    { "id": "media.volUp", "name": "Volume up", "category": "Media", "action": { "type": "keys", "keys": "VolumeUp" } },
+    { "id": "media.volDown", "name": "Volume down", "category": "Media", "action": { "type": "keys", "keys": "VolumeDown" } },
+    { "id": "media.mute", "name": "Mute", "category": "Media", "action": { "type": "keys", "keys": "VolumeMute" } },
+    { "id": "media.playPause", "name": "Play / pause", "category": "Media", "action": { "type": "keys", "keys": "MediaPlayPause" } },
+
+    { "id": "nav.up", "name": "Up", "category": "Navigation", "action": { "type": "keys", "keys": "Up" } },
+    { "id": "nav.down", "name": "Down", "category": "Navigation", "action": { "type": "keys", "keys": "Down" } },
+    { "id": "nav.left", "name": "Left", "category": "Navigation", "action": { "type": "keys", "keys": "Left" } },
+    { "id": "nav.right", "name": "Right", "category": "Navigation", "action": { "type": "keys", "keys": "Right" } },
+    { "id": "nav.enter", "name": "Enter", "category": "Navigation", "action": { "type": "keys", "keys": "Enter" } },
+    { "id": "nav.esc", "name": "Esc", "category": "Navigation", "action": { "type": "keys", "keys": "Esc" } },
+    { "id": "nav.wheelUp", "name": "Wheel up", "category": "Navigation", "action": { "type": "mouse", "wheel": 1 } },
+    { "id": "nav.wheelDown", "name": "Wheel down", "category": "Navigation", "action": { "type": "mouse", "wheel": -1 } },
+
+    { "id": "ue.play", "name": "Play in Editor", "category": "Unreal", "action": { "type": "keys", "keys": "Alt+P" } },
+    { "id": "ue.simulate", "name": "Simulate", "category": "Unreal", "action": { "type": "keys", "keys": "Alt+S" } },
+    { "id": "ue.stop", "name": "Stop PIE", "category": "Unreal", "action": { "type": "keys", "keys": "Esc" } },
+    { "id": "ue.liveCoding", "name": "Live Coding compile", "category": "Unreal", "action": { "type": "keys", "keys": "Ctrl+Alt+F11" } },
+    { "id": "ue.saveAll", "name": "Save all", "category": "Unreal", "action": { "type": "keys", "keys": "Ctrl+Shift+S" } },
+    { "id": "ue.console", "name": "Console", "category": "Unreal", "action": { "type": "keys", "keys": "`" } },
+    { "id": "ue.translate", "name": "Move tool", "category": "Unreal", "action": { "type": "keys", "keys": "W" } },
+    { "id": "ue.rotate", "name": "Rotate tool", "category": "Unreal", "action": { "type": "keys", "keys": "E" } },
+    { "id": "ue.scale", "name": "Scale tool", "category": "Unreal", "action": { "type": "keys", "keys": "R" } },
+    { "id": "ue.focus", "name": "Focus selection", "category": "Unreal", "action": { "type": "keys", "keys": "F" } },
+    { "id": "ue.gameView", "name": "Game View", "category": "Unreal", "action": { "type": "keys", "keys": "G" } },
+    { "id": "ue.lit", "name": "Lit view", "category": "Unreal", "action": { "type": "keys", "keys": "Alt+4" } },
+    { "id": "ue.wireframe", "name": "Wireframe view", "category": "Unreal", "action": { "type": "keys", "keys": "Alt+2" } },
+    { "id": "ue.contentDrawer", "name": "Content drawer", "category": "Unreal", "action": { "type": "keys", "keys": "Ctrl+Space" } },
+
+    { "id": "game.action1", "name": "Game action 1", "category": "Game", "action": { "type": "keys", "keys": "1", "hold": true } },
+    { "id": "game.action2", "name": "Game action 2", "category": "Game", "action": { "type": "keys", "keys": "2", "hold": true } },
+    { "id": "game.action3", "name": "Game action 3", "category": "Game", "action": { "type": "keys", "keys": "3", "hold": true } },
+    { "id": "game.action4", "name": "Game action 4", "category": "Game", "action": { "type": "keys", "keys": "4", "hold": true } },
+    { "id": "game.jump", "name": "Jump", "category": "Game", "action": { "type": "keys", "keys": "Space", "hold": true } },
+    { "id": "game.forward", "name": "Forward", "category": "Game", "action": { "type": "keys", "keys": "W", "hold": true } },
+    { "id": "game.back", "name": "Back", "category": "Game", "action": { "type": "keys", "keys": "S", "hold": true } },
+    { "id": "game.left", "name": "Strafe left", "category": "Game", "action": { "type": "keys", "keys": "A", "hold": true } },
+    { "id": "game.right", "name": "Strafe right", "category": "Game", "action": { "type": "keys", "keys": "D", "hold": true } }
+  ],
+  "layers": [
+    {
+      "id": "stock", "name": "Stock keypad", "color": "#9aa0a6",
+      "map": {
+        "K1": "pass", "K2": "pass", "K3": "pass", "K4": "pass", "K5": "pass", "K6": "pass",
+        "K7": "pass", "K8": "pass", "K9": "pass", "K0": "pass", "KDOT": "pass", "KENTER": "pass",
+        "KMINUS": "pass", "KPLUS": "pass", "KSPACE": "pass",
+        "KNOB_CCW": "pass", "KNOB_CW": "pass",
+        "JOY_UP": "pass", "JOY_DOWN": "pass", "JOY_LEFT": "pass", "JOY_RIGHT": "pass", "JOY_PRESS": "pass"
+      }
+    },
+    {
+      "id": "desktop", "name": "Office", "color": "#4f8cff",
+      "map": {
+        "K1": "edit.copy", "K2": "edit.paste", "K3": "edit.cut", "K4": "edit.undo", "K5": "edit.redo", "K6": "edit.save",
+        "K7": "edit.find", "K8": "edit.selectAll", "K9": "win.snip", "K0": "win.explorer", "KDOT": "win.desktop", "KENTER": "nav.enter",
+        "KMINUS": "media.mute", "KPLUS": "win.taskView", "KSPACE": "media.playPause",
+        "KNOB_CCW": "media.volDown", "KNOB_CW": "media.volUp",
+        "JOY_UP": "nav.up", "JOY_DOWN": "nav.down", "JOY_LEFT": "nav.left", "JOY_RIGHT": "nav.right", "JOY_PRESS": "nav.enter"
+      }
+    },
+    {
+      "id": "unreal", "name": "UE Editor", "color": "#f5c400",
+      "map": {
+        "K1": "ue.play", "K2": "ue.simulate", "K3": "ue.stop", "K4": "ue.liveCoding", "K5": "ue.saveAll", "K6": "ue.console",
+        "K7": "ue.translate", "K8": "ue.rotate", "K9": "ue.scale", "K0": "ue.focus", "KDOT": "ue.gameView", "KENTER": "nav.enter",
+        "KMINUS": "ue.lit", "KPLUS": "ue.wireframe", "KSPACE": "ue.contentDrawer",
+        "KNOB_CCW": "edit.undo", "KNOB_CW": "edit.redo",
+        "JOY_UP": "nav.up", "JOY_DOWN": "nav.down", "JOY_LEFT": "nav.left", "JOY_RIGHT": "nav.right", "JOY_PRESS": "ue.focus"
+      }
+    },
+    {
+      "id": "game", "name": "Game", "color": "#34c77b",
+      "map": {
+        "K1": "game.action1", "K2": "game.action2", "K3": "game.action3", "K4": "game.action4",
+        "KSPACE": "game.jump",
+        "JOY_UP": "game.forward", "JOY_DOWN": "game.back", "JOY_LEFT": "game.left", "JOY_RIGHT": "game.right",
+        "KNOB_CCW": "nav.wheelDown", "KNOB_CW": "nav.wheelUp"
+      }
+    },
+    {
+      "id": "diag", "name": "Interception test · block all", "color": "#ff5d5d",
+      "map": {
+        "K1": "block", "K2": "block", "K3": "block", "K4": "block", "K5": "block", "K6": "block",
+        "K7": "block", "K8": "block", "K9": "block", "K0": "block", "KDOT": "block", "KENTER": "block",
+        "KMINUS": "block", "KPLUS": "block", "KSPACE": "block",
+        "KNOB_CCW": "block", "KNOB_CW": "block",
+        "JOY_UP": "block", "JOY_DOWN": "block", "JOY_LEFT": "block", "JOY_RIGHT": "block", "JOY_PRESS": "block"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "unreal-editor", "name": "Unreal Editor",
+      "processes": [ "UnrealEditor.exe", "UnrealEditor-Win64-DebugGame.exe", "UnrealEditor-Win64-Debug.exe" ],
+      "layer": "unreal", "forward": "controls",
+      "overrides": {}
+    },
+    {
+      "id": "unreal-game", "name": "Packaged UE game",
+      "processes": [ "*-Win64-Shipping.exe", "*-Win64-Test.exe", "*-Win64-DebugGame.exe" ],
+      "layer": "game", "forward": "controls",
+      "overrides": {}
+    },
+    {
+      "id": "vscode", "name": "VS Code",
+      "processes": [ "Code.exe" ],
+      "overrides": {
+        "edit.find": { "type": "keys", "keys": "Ctrl+Shift+F" },
+        "win.snip": { "type": "keys", "keys": "Ctrl+Shift+P" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MacroHub.Core\MacroHub.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- The shipped default configuration is exercised by the tests. -->
+    <None Include="..\..\src\MacroHub\defaults\hub.json" Link="hub.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\src\MacroHub\defaults\hub.en.json" Link="hub.en.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

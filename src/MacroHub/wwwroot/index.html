@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MacroHub · 宏键盘配置</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">◆</span> MacroHub <small>宏键盘系统层</small></div>
+  <div class="chips" id="chips"></div>
+  <div class="savebar">
+    <button class="ghost small" id="btnLang" title="切换界面语言">EN</button>
+    <a class="button ghost small navlink" href="help.html" target="_blank" title="在新标签页打开帮助文档">帮助</a>
+    <span id="dirty" class="dirty" hidden>● 有未保存修改</span>
+    <button id="btnRevert" class="ghost" disabled>撤销修改</button>
+    <button id="btnSave" class="primary" disabled>保存并应用</button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="stage">
+    <div class="layerbar">
+      <div class="tabs" id="layerTabs"></div>
+      <div class="layer-actions">
+        <button class="ghost small" id="btnActivateLayer" title="把当前查看的层设为手动激活层">设为激活层</button>
+        <button class="ghost small" id="btnLayerProps">层属性</button>
+        <button class="ghost small" id="btnAddLayer">+ 新建层</button>
+        <button class="danger small" id="btnDeleteLayer" title="删除当前查看的层">删除层</button>
+        <a class="button ghost small navlink help-q" href="help.html#layers" target="_blank" title="层的说明">?</a>
+      </div>
+    </div>
+    <div class="device-wrap">
+      <div class="device-row">
+        <svg id="device" class="device" viewBox="-0.3 -0.3 8.0 4.4" role="img" aria-label="宏键盘布局"></svg>
+        <section class="light-panel" id="lightPanel">
+          <div class="row between">
+            <strong>灯光</strong>
+            <label class="check small" title="打开后 MacroHub 才会写入键盘背光"><input type="checkbox" id="lightEnabled"> 接管</label>
+          </div>
+          <label class="field">模式
+            <select id="lightMode"></select>
+          </label>
+          <label class="field">亮度 <span class="muted small" id="lightBrightVal"></span>
+            <input type="range" id="lightBright" min="1" max="6" step="1">
+          </label>
+          <label class="field">色彩
+            <span class="light-color"><input type="color" id="lightColor"><input type="text" id="lightColorHex" class="mono" spellcheck="false"></span>
+          </label>
+          <label class="field">速度 <span class="muted small" id="lightSpeedVal"></span>
+            <input type="range" id="lightSpeed" min="0" max="5" step="1">
+          </label>
+          <div class="field">方向
+            <div class="seg" id="lightDir">
+              <button type="button" data-dir="0">顺</button>
+              <button type="button" data-dir="1">逆</button>
+            </div>
+          </div>
+          <label class="check small" title="勾选后这个层有自己的灯光，切到该层时自动应用"><input type="checkbox" id="lightPerLayer"> 本层独立</label>
+          <p class="light-hint muted small" id="lightHint"></p>
+        </section>
+      </div>
+      <p class="hint">点击按键进行编辑 · 实体按键按下时高亮 · 黄色描边为当前激活层</p>
+    </div>
+
+    <nav class="subtabs" id="bottomTabs">
+      <button data-tab="apps" class="active">应用档案</button>
+      <button data-tab="functions">功能库</button>
+      <button data-tab="settings">设备与拦截</button>
+      <button data-tab="json">配置 JSON</button>
+      <button data-tab="events" class="tab-right">实时事件</button>
+      <button data-tab="test">测试台</button>
+    </nav>
+
+    <div class="panel" data-panel="events" hidden>
+      <div class="row between">
+        <label class="check"><input type="checkbox" id="evShowSignals" checked> 显示原始信号</label>
+        <button class="ghost small" id="evClear">清空</button>
+      </div>
+      <ol id="eventLog" class="eventlog"></ol>
+    </div>
+
+    <div class="panel" data-panel="test" hidden>
+      <div class="grid2">
+        <div>
+          <h3>实体按键拦截测试</h3>
+          <p class="muted">1. 切到会拦截按键的层（如“通用办公”）并点“设为激活层”。<br>
+            2. 点击下面输入框，按宏键盘按键。<br>
+            3. 拦截成功时输入框<b>不会</b>出现原厂数字，只会触发功能。</p>
+          <textarea id="testInput" rows="5" placeholder="焦点放这里再按宏键盘…"></textarea>
+          <div class="row">
+            <span class="stat">触发 <b id="statControls">0</b></span>
+            <span class="stat">已拦截 <b id="statSuppressed">0</b></span>
+            <span class="stat">输入框收到按键 <b id="statTyped">0</b></span>
+            <button class="ghost small" id="statReset">重置</button>
+          </div>
+          <div class="row">
+            <span class="stat" title="从厂商/Consumer 报告读到的物理按下次数">物理按下 <b id="hubPhysical">0</b></span>
+            <span class="stat" title="钩子拦截掉的原始按键">Hub 拦截 <b id="hubSuppressed">0</b></span>
+            <span class="stat" title="物理报告晚于钩子等待时间，原始按键漏出">泄漏 <b id="hubLeaked">0</b></span>
+            <span class="stat" title="需要等待物理报告的次数 / 最长等待">等待 <b id="hubWaited">0</b> / <b id="hubMaxWait">0</b>ms</span>
+          </div>
+          <label class="field">钩子等待物理报告的时间：<output id="waitMsOut"></output> ms
+            <input type="range" id="waitMs" min="0" max="30" step="1">
+          </label>
+        </div>
+        <div>
+          <h3>动作测试</h3>
+          <p class="muted">直接执行一个动作（发往当前焦点窗口，即本页面）。</p>
+          <div id="actionTester"></div>
+          <button class="primary" id="btnRunAction">执行</button>
+          <h3>应用客户端（协议 v2）</h3>
+          <p class="muted" data-i18n-html="clientProtocol">推荐：命名管道 <code id="pipeName">\\.\pipe\MacroHub</code>（每行一条 JSON）；也可用 <code>ws://127.0.0.1:17900/ws</code>。
+            发送 <code>{"type":"hello","role":"app","protocol":2,"app":"…","pid":…,"mode":"editor"}</code> 登记，在前台时按应用档案收到 <code>control</code> 或 <code>function</code> 事件。
+            <a href="help.html#app-protocol" target="_blank">协议说明</a></p>
+          <ul id="clientList" class="plain"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" data-panel="apps">
+      <div class="row between"><h3>应用档案</h3><button class="ghost small" id="btnAddApp">+ 新建应用</button></div>
+      <p class="muted">前台进程匹配后：可自动切换到指定层，并覆盖功能的动作。开启“转发”后，已连接的应用客户端（如 UE 插件）收到功能事件并原生处理；未连接时回退为本地动作。</p>
+      <div id="appList"></div>
+    </div>
+
+    <div class="panel" data-panel="functions" hidden>
+      <div class="row between"><h3>功能库（系统层接口）</h3><button class="ghost small" id="btnAddFunction">+ 新建功能</button></div>
+      <p class="muted">功能是与硬件、与应用都无关的语义命令。层把按键映射到功能，应用档案可以覆盖功能的具体动作。</p>
+      <div class="fn-toolbar">
+        <input id="fnSearch" type="search" placeholder="搜索名称、ID、快捷键、分类、使用位置…（多个词用空格分隔，按 / 聚焦）" autocomplete="off">
+        <select id="fnCategory" title="分类"></select>
+        <select id="fnUsage" title="使用情况">
+          <option value="">全部</option>
+          <option value="used">已绑定到按键</option>
+          <option value="unused">未使用</option>
+          <option value="override">有应用覆盖</option>
+        </select>
+        <span id="fnCount" class="muted small"></span>
+      </div>
+      <table class="table" id="fnTable"></table>
+    </div>
+
+    <div class="panel" data-panel="settings" hidden>
+      <div class="grid2">
+        <div>
+          <h3>拦截模式</h3>
+          <label class="radio"><input type="radio" name="supp" value="correlate"> <span><b>关联</b>（默认）— 用直接读取的厂商/Consumer 报告识别宏键盘按键，主键盘不受影响</span></label>
+          <label class="radio"><input type="radio" name="supp" value="codes"> <span><b>按键码</b>— 按键签名里的键码一律视为宏键盘（固件改为 F13–F24 等独有键码时使用）</span></label>
+          <label class="radio"><input type="radio" name="supp" value="off"> <span><b>关闭</b>— 从不拦截，只触发动作</span></label>
+          <h3>未绑定按键</h3>
+          <label class="radio"><input type="radio" name="unbound" value="passthrough"> <span>原样输出</span></label>
+          <label class="radio"><input type="radio" name="unbound" value="block"> <span>屏蔽</span></label>
+          <h3>旋钮音量保护</h3>
+          <label class="check"><input type="checkbox" id="knobVolumeGuard"> <span>旋钮用于其他功能时，自动恢复被旋钮改动的系统音量</span></label>
+          <p class="muted small">W909 旋钮在硬件层固定发送“音量±”，Windows 会直接调节音量且无法拦截。开启后，旋钮被绑定到非音量功能、被屏蔽或转发给应用时，MacroHub 会立即把音量恢复原值（屏幕上的音量提示可能闪一下）。</p>
+          <div class="muted small" id="volumeGuardStatus"></div>
+        </div>
+        <div>
+          <h3>设备</h3>
+          <label class="field">名称 <input id="devName"></label>
+          <label class="field">匹配（HID 路径包含的子串，逗号分隔）<input id="devMatch"></label>
+          <div id="devCollections" class="muted mono small"></div>
+          <h3>本机 HID 设备</h3>
+          <button class="ghost small" id="btnListDevices">刷新列表</button>
+          <ul id="deviceList" class="plain mono small"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" data-panel="json" hidden>
+      <div class="row">
+        <button class="ghost small" id="btnJsonLoad">从编辑状态刷新</button>
+        <button class="ghost small" id="btnJsonApply">应用到编辑器</button>
+        <button class="ghost small" id="btnJsonExport">导出文件</button>
+        <label class="button ghost small filebtn">导入文件<input type="file" id="jsonImport" accept=".json"></label>
+        <button class="danger small" id="btnReset">恢复默认配置</button>
+      </div>
+      <textarea id="jsonText" class="mono" rows="24" spellcheck="false"></textarea>
+      <div id="jsonErrors" class="errors"></div>
+    </div>
+  </section>
+
+  <aside class="inspector" id="inspector">
+    <div class="empty">选择左侧的一个按键</div>
+  </aside>
+</main>
+
+<div id="toast" class="toast" hidden></div>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
