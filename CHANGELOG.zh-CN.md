@@ -7,6 +7,8 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-20
+
 ### 新增
 - Unreal Engine 插件（阶段二，`unreal/MacroKeyboard`，UE 5.8）：
   - 命名管道客户端（后台线程、自动重连）、协议 v2 握手、事件按帧在游戏线程分发（`UMacroKeyboardSubsystem`，C++ 与蓝图事件）。
@@ -33,7 +35,7 @@
 ### 变更
 - 协议 v2 的 `welcome` / `profile` 附带每个控件的 `rect`（布局单位）与 `padConnected`，客户端可以按与 Web 界面一致的方式绘制设备。
 
-## [0.1.0] - 2026-09-17
+## 0.1.0 - 2026-09-17
 
 阶段一：Windows 11 系统层首个版本。
 
@@ -51,5 +53,5 @@
 - 本地 Web 接口与 WebSocket 仅接受本机界面与本机非浏览器客户端（校验 Host 与 Origin），防止网页跨站调用与 DNS 重绑定。
 - 命名管道仅允许当前 Windows 用户连接。
 
-[Unreleased]: ../../compare/v0.1.0...HEAD
-[0.1.0]: ../../releases/tag/v0.1.0
+[Unreleased]: ../../compare/v0.2.0...HEAD
+[0.2.0]: ../../releases/tag/v0.2.0

@@ -386,7 +386,7 @@ only, create a new function and bind that.
 
 ## Changelog {#changelog}
 
-### Unreleased {#unreleased}
+### 2026-09-20 · 0.2.0 {#v0-2-0}
 - The interface and the help are available in English and Chinese (**EN / 中文** in the top bar).
 - 2.4G receiver supported; the top bar shows how the pad is connected (USB / 2.4G / Bluetooth) and its battery; so does the tray menu.
 - Tray icon: the diamond sits in a ring open at the bottom that shows the battery; only the grey track when the pad is not connected.

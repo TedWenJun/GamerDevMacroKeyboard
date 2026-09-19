@@ -8,6 +8,8 @@ versions follow [Semantic Versioning](https://semver.org/). Item-by-item notes f
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-20
+
 ### Added
 - Unreal Engine plugin (phase 2, `unreal/MacroKeyboard`, UE 5.8):
   - Named pipe client (background thread, automatic reconnect), protocol v2 handshake, events delivered once per frame on the game thread (`UMacroKeyboardSubsystem`, C++ and Blueprint events).
@@ -34,7 +36,7 @@ versions follow [Semantic Versioning](https://semver.org/). Item-by-item notes f
 ### Changed
 - Protocol v2 `welcome` / `profile` carry each control's `rect` (layout units) and `padConnected`, so clients can draw the pad the way the web UI does.
 
-## [0.1.0] - 2026-09-17
+## 0.1.0 - 2026-09-17
 
 Phase 1: first release of the Windows 11 system layer.
 
@@ -52,5 +54,5 @@ Phase 1: first release of the Windows 11 system layer.
 - The local web API and WebSocket only accept the local page and local non-browser clients (Host and Origin checked), preventing cross-site calls from web pages and DNS rebinding.
 - The named pipe only accepts the current Windows user.
 
-[Unreleased]: ../../compare/v0.1.0...HEAD
-[0.1.0]: ../../releases/tag/v0.1.0
+[Unreleased]: ../../compare/v0.2.0...HEAD
+[0.2.0]: ../../releases/tag/v0.2.0
