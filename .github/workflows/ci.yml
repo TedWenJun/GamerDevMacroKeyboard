@@ -18,9 +18,9 @@ jobs:
     name: Build & unit tests
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         with:
           global-json-file: global.json
 
@@ -33,7 +33,7 @@ jobs:
       - name: Unit tests
         run: dotnet test MacroHub.slnx -c Release --no-build --logger "trx;LogFileName=unit.trx" --results-directory TestResults
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
 
@@ -48,13 +48,13 @@ jobs:
         shell: pwsh
         run: ./scripts/publish.ps1 -SkipTests -Version "0.0.0-ci.${{ github.run_number }}"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: MacroHub-win-x64
           path: artifacts/*.zip*
           retention-days: 14
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: test-results
