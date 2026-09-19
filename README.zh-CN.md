@@ -5,11 +5,14 @@
 **宏键盘系统层 · Windows 11 + Unreal Engine 插件** —— 把宏键盘的每个物理按键、旋钮、摇杆变成可配置的“功能”，按前台应用自动切换，并通过本地协议交给应用（如 Unreal Engine 编辑器）按自身上下文处理。无需刷写键盘固件。
 
 <p align="center">
-  <img src="docs/images/w909.jpg" alt="SXS-W909 宏键盘：旋钮、15 个按键和摇杆" width="46%">
-  &nbsp;
-  <img src="docs/images/macrohub-web-ui.png" alt="MacroHub 配置页：按键上显示当前层的功能，右侧为灯光面板" width="50%">
+  <img src="docs/images/w909.jpg" alt="SXS-W909 宏键盘：旋钮、15 个按键和摇杆" width="640">
+  <br><sub>SXS-W909 宏键盘：旋钮、15 个按键和摇杆</sub>
 </p>
-<p align="center"><sub>左：SXS-W909 宏键盘（旋钮、15 个按键、摇杆）· 右：MacroHub 配置页，每个控件显示它在当前层的功能</sub></p>
+
+<p align="center">
+  <img src="docs/images/macrohub-web-ui.png" alt="MacroHub 配置页：按键上显示当前层的功能，右侧为灯光面板" width="820">
+  <br><sub>MacroHub 配置页：每个控件显示它在当前层的功能，右侧为灯光设置</sub>
+</p>
 
 ---
 

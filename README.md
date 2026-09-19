@@ -8,11 +8,14 @@ controls to applications (such as the Unreal Engine editor) over a local protoco
 No firmware flashing required.
 
 <p align="center">
-  <img src="docs/images/w909.jpg" alt="SXS-W909 macro pad: knob, 15 keys and a joystick" width="46%">
-  &nbsp;
-  <img src="docs/images/macrohub-web-ui.png" alt="MacroHub web setup page: the pad drawn with each key's function, and the lighting panel" width="50%">
+  <img src="docs/images/w909.jpg" alt="SXS-W909 macro pad: knob, 15 keys and a joystick" width="640">
+  <br><sub>The SXS-W909 macro pad: knob, 15 keys and a joystick</sub>
 </p>
-<p align="center"><sub>Left: the SXS-W909 pad (knob, 15 keys, joystick) · Right: the MacroHub setup page, where each control shows its function in the current layer</sub></p>
+
+<p align="center">
+  <img src="docs/images/macrohub-web-ui.png" alt="MacroHub web setup page: the pad drawn with each key's function, and the lighting panel" width="820">
+  <br><sub>The MacroHub setup page: each control shows its function in the current layer; lighting on the right</sub>
+</p>
 
 ---
 
